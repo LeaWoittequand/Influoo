@@ -1,12 +1,12 @@
 .card {
   height: 300px;
-  // width: 200px;
   background-size: cover !important;
   background-position: center;
   background-color: white;
   color: black;
   position: relative;
   margin-bottom: 25px;
+  margin-top: 60px;
 }
 .card-user {
   position: absolute;
@@ -19,7 +19,7 @@
 .card-photo {
   position: absolute;
   width: 100%;
-  top: 40px;
+  top: -50px;
   text-transform: uppercase;
   z-index: 2;
 }
@@ -52,4 +52,19 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 7px;
+}
+
+.card-rs {
+  position: absolute;
+  width: 100%;
+  top: 180px;
 }
