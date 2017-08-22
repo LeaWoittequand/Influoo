@@ -2,18 +2,27 @@
 
   <div class="influencer-content">
 
-    <div class="influencer-banner"></div>
+    <div class="influencer-banner">
+      <%= image_tag @influencer.banner_img, class: "banner"%>
+    </div>
 
-    <div class="influencer-avatar"></div>
+    <div class="influencer-avatar text-center">
+      <div class="image"><%= image_tag @influencer.avatar, class: "avatar"%></div>
+    </div>
 
-    <div class="influencer-infos"></div>
-      <%= @influencer.pseudo %>
-      <%= @influencer.language %>
-      <%= @influencer.category %>
+    <div class="influencer-contact">
+      <%= link_to 'Contact', '', class: "btn btn-sucess" %>
+    </div>
 
+    <div class="influencer-infos text-center">
+     <h3><%= @influencer.pseudo %></h3>
+      <p><%= @influencer.language %></p>
+      <p><strong><%= @influencer.category.name %></strong></p>
+    </div>
 
-    <div class="influencer-description"></div>
+    <div class="influencer-description text-center">
       <%= @influencer.description %>
+    </div>
 
   </div>
 
