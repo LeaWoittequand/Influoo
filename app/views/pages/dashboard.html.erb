@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs tabs-default mb30" role="tablist">
     <li class="nav-item" role="presentation"><a class="nav-link active" href="#profile" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="true">Profile</a></li>
@@ -7,11 +7,20 @@
   </ul>
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade active show" id="profile" aria-expanded="true">
+    <div role="tabpanel" class="tab-pane fade active" id="profile" aria-expanded="true">
     TEST profile
     </div>
     <div role="tabpanel" class="tab-pane fade" id="inbox" aria-expanded="false">
     TEST inbox
+    <% @messages.each do |msg| %>
+      <div class="message row">
+        <div class="msg_sender col-xs-12 col-sd-6 col-md-4">
+          <h3><%= msg.influencer.pseudo %></h3>
+          <p><%= msg.created_at %></p>
+        </div>
+        <div class="msg_object col-xs-12 col-sd-6 col-md-8"><%= msg.object  %></div>
+      </div>
+    <% end %>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="favorites" aria-expanded="false">
     TEST favorites

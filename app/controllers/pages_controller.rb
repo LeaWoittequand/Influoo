@@ -5,5 +5,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @messages = Message.all.where(user: current_user)
   end
 end
