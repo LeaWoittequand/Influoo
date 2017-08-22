@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20170822122000) do
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
   end
 
   create_table "favorites", force: :cascade do |t|
