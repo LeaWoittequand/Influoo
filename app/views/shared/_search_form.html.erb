@@ -2,6 +2,8 @@
   <%= simple_form_for :search, url: influencers_path, method: 'get'  do |f| %>
     <div class="row">
       <div class="col-xs-12 col-sm-3"><%= f.input :language , placeholder: "Français" ,label: false%></div>
+           <div class="col-xs-12 col-sm-3"><%= f.input :category , placeholder: "Français" ,label: false%></div>
+
       <div class="col-xs-12 col-sm-3"><%= f.submit "Search", class: "btn btn-success" %></div>
     </div>
   <% end %>
