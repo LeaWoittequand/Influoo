@@ -11,9 +11,9 @@ class CreateInfluencers < ActiveRecord::Migration[5.1]
       t.text :description
       t.string :language
       t.string :avatar
-      t.image :banner_img
+      t.string :banner_img
       t.references :user, foreign_key: true
-      t.references :inluencer, foreign_key: true
+      t.references :category, foreign_key: true
 
       t.timestamps
     end
