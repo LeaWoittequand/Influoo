@@ -11,7 +11,7 @@
     </div>
 
     <div class="influencer-contact">
-      <%= link_to 'Contact', '', class: "btn btn-sucess" %>
+      <%= link_to 'Contact', '', class: "btn btn-danger" %>
     </div>
 
     <div class="influencer-infos text-center">
@@ -22,6 +22,30 @@
 
     <div class="influencer-description text-center">
       <%= @influencer.description %>
+    </div>
+
+    <div class="social-container">
+      <div class="cards-container col-xs-12 col-sm-6 col-md-6">
+
+        <div class="card fb-card">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+
+        <div class="card tw-card">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+
+        <div class="card ig-card">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </div>
+
+      </div>
+
+      <div class="pictures-container col-xs-12 col-sm-6 col-md-6">
+        .row
+
+        <p>put the grid image here</p>
+      </div>
     </div>
 
   </div>
