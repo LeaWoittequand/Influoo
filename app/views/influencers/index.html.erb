@@ -1,6 +1,17 @@
-
-<h1> Tous les Influenceurs </h1>
-
 <div class="container text-center">
   <%= render "shared/search_form" %>
+</div>
+
+<div class="container result">
+  <div class="row">
+    <div class="container_card">
+      <div class="row">
+        <% @influencers.each do |influencer| %>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+          <%= render "shared/card", influencer: influencer %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
