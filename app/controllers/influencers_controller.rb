@@ -1,12 +1,14 @@
 class InfluencersController < ApplicationController
-skip_before_action :authenticate_user!, only: [:index]
+
+  before_action :set_influencers, only: [:show, :edit]
+  skip_before_action :authenticate_user!, only: [:index]
+
 
   def index
     @influencers = Influencer.all
   end
 
   def show
-    @influencer = Influencer.find(params[:id])
   end
 
   def new
@@ -24,9 +26,15 @@ skip_before_action :authenticate_user!, only: [:index]
   def destroy
   end
 
-  private
 
-  def influencers_params
-    params.require(:influencer).permit(:pseudo, :description, :language)
-  end
+private
+
+def set_influencers
+  @influencer = Influencer.find(params[:id])
+end
+
+ def influencers_params
+   params.require(:influencer).permit(:pseudo, :description, :language)
+ end
+
 end
