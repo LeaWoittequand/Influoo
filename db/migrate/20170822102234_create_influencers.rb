@@ -10,7 +10,7 @@ class CreateInfluencers < ActiveRecord::Migration[5.1]
       t.string :tw_followers
       t.text :description
       t.string :language
-      t.image :avatar
+      t.string :avatar
       t.image :banner_img
       t.references :user, foreign_key: true
       t.references :inluencer, foreign_key: true
