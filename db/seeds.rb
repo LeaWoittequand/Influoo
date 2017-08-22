@@ -31,7 +31,7 @@ sara = User.create!( first_name: "Sara",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{sara.first_name} #{sara.last_name}"
+Influencer.create!( pseudo: "#{sara.first_name} #{sara.last_name}",
                     fb_url: "https://www.facebook.com/CollageVintage/",
                     fb_followers: 494935,
                     ig_url: "https://www.instagram.com/collagevintage/",
@@ -51,7 +51,7 @@ zoella = User.create!( first_name: "Zoella",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{zoella.first_name} #{zoella.last_name}"
+Influencer.create!( pseudo: "#{zoella.first_name} #{zoella.last_name}",
                     fb_url: "https://www.facebook.com/zoe.zoella",
                     fb_followers: 2666027,
                     ig_url: "https://www.instagram.com/zoella/",
@@ -71,7 +71,7 @@ christene = User.create!( first_name: "Christene",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{christene.first_name} #{christene.last_name}"
+Influencer.create!( pseudo: "#{christene.first_name} #{christene.last_name}",
                     fb_url: "https://www.facebook.com/refinery29/",
                     fb_followers: 4748638,
                     ig_url: "https://www.instagram.com/refinery29/",
@@ -91,7 +91,7 @@ devyni = User.create!( first_name: "Devyni",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{devyni.first_name} #{devyni.last_name}"
+Influencer.create!( pseudo: "#{devyni.first_name} #{devyni.last_name}",
                     fb_url: "https://www.facebook.com/DEVYNIstyles/",
                     fb_followers: 423,
                     ig_url: "https://www.instagram.com/devynistyles/",
@@ -111,7 +111,7 @@ chiara = User.create!( first_name: "Chiara",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{chiara.first_name} #{chiara.last_name}"
+Influencer.create!( pseudo: "#{chiara.first_name} #{chiara.last_name}",
                     fb_url: "https://www.facebook.com/theblondesalad/",
                     fb_followers: 1241361,
                     ig_url: "https://www.instagram.com/chiaraferragni/",
@@ -131,7 +131,7 @@ mariano = User.create!( first_name: "Mariano",
               email: first_name.downcase + "divaio" + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{mariano.first_name} #{mariano.last_name}"
+Influencer.create!( pseudo: "#{mariano.first_name} #{mariano.last_name}",
                     fb_url: "https://www.facebook.com/MARIANODIVAIO.FANPAGE/",
                     fb_followers: 3197403,
                     ig_url: "https://www.instagram.com/marianodivaio/",
@@ -155,7 +155,7 @@ amy = User.create!( first_name: "Amy",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{amy.first_name} #{amy.last_name}"
+Influencer.create!( pseudo: "#{amy.first_name} #{amy.last_name}",
                     fb_url: "https://www.facebook.com/AmyPorterfield",
                     fb_followers: 243298,
                     ig_url: "",
@@ -175,7 +175,7 @@ melanie = User.create!( first_name: "Melanie",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{melanie.first_name} #{melanie.last_name}"
+Influencer.create!( pseudo: "#{melanie.first_name} #{melanie.last_name}",
                     fb_url: "https://www.facebook.com/pg/EntrepreneuressAcademy",
                     fb_followers: 243298,
                     ig_url: "",
@@ -195,7 +195,7 @@ jonathon = User.create!( first_name: "Jonathon",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{jonathon.first_name} #{jonathon.last_name}"
+Influencer.create!( pseudo: "#{jonathon.first_name} #{jonathon.last_name}",
                     fb_url: "https://www.facebook.com/jcolman",
                     fb_followers: 1762,
                     ig_url: "",
@@ -215,7 +215,7 @@ jonathon = User.create!( first_name: "Jonathon",
               email: first_name.downcase + last_name.downcase + email,
               avatar: ""
             )
-Influencer.create!( pseudo: "#{jonathon.first_name} #{jonathon.last_name}"
+Influencer.create!( pseudo: "#{jonathon.first_name} #{jonathon.last_name}",
                     fb_url: "https://www.facebook.com/jcolman",
                     fb_followers: 1762,
                     ig_url: "",
