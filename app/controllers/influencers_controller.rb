@@ -1,4 +1,5 @@
 class InfluencersController < ApplicationController
+skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @influencers = Influencer.all
@@ -21,5 +22,11 @@ class InfluencersController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def influencers_params
+    params.require(:influencer).permit(:pseudo, :description, :language)
   end
 end
