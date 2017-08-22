@@ -1,3 +1,4 @@
+
 <div class="container">
 
   <div class="influencer-content">
@@ -29,6 +30,8 @@
 
         <div class="card fb-card">
           <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-thumbs-up" aria-hidden="true">10K</i>
+          <i class="fa fa-eye" aria-hidden="true">100K</i>
         </div>
 
         <div class="card tw-card">
@@ -42,9 +45,22 @@
       </div>
 
       <div class="pictures-container col-xs-12 col-sm-6 col-md-6">
-        .row
 
-        <p>put the grid image here</p>
+        <div> <%= image_tag 'http://lorempixel.com/300/150/people/', class: "col-xs-12" %>
+        </div>
+
+        <div>
+          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-6" %>
+        </div>
+
+        <div>
+          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-6" %>
+        </div>
+
+        <div>
+          <%= image_tag 'http://lorempixel.com/300/150/people/', class: "col-xs-12" %>
+        </div>
+
       </div>
     </div>
 
