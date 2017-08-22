@@ -2,34 +2,39 @@ email = "@gmail.com"
 fashion = Category.create!(name: "Fashion")
 sport = Category.create!(name: "Sport")
 new_tech = Category.create!(name: "New Tech")
+pwd = "123456"
 
 User.create!( first_name: "Lea",
               last_name: "Woittequand",
               description: "I've created Cooker Market at the end of my studies. Passionate by web_marketing, i love to learn and understand new process.",
-              email: first_name.downcase + email,
+              email: "lea" + email,
               avatar: "",
+              password: pwd
             )
 User.create!( first_name: "Aurelien",
               last_name: "Bigo",
               description: "I have launched my own company 10 month ago, which is selling bicycle spare parts : carbon fibers only. We are selling online spare part and 'à la carte' road bicycles. The company is called : Stiff Bicycles Factory. ",
-              email: first_name.downcase + email,
+              email: "aurelien" + email,
               avatar: "",
+              password: pwd
             )
 User.create!( first_name: "Clement",
               last_name: "Meyer",
               description: "I really enjoy get my hand dirty and try some new things.
 I aim to create video games, and for that, I need collaborators.",
-              email: first_name.downcase + email,
+              email: "clement" + email,
               avatar: "",
+              password: pwd
             )
 puts "Pro users created"
 
 # FASHION
 sara = User.create!( first_name: "Sara",
-              last_name: "Escudero",
-              description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
+                    last_name: "Escudero",
+                    description: "",
+                    email: "sara" + email,
+                    avatar: "",
+                    password: pwd
             )
 Influencer.create!( pseudo: "#{sara.first_name} #{sara.last_name}",
                     fb_url: "https://www.facebook.com/CollageVintage/",
@@ -46,10 +51,11 @@ Influencer.create!( pseudo: "#{sara.first_name} #{sara.last_name}",
                     category: fashion
                   )
 zoella = User.create!( first_name: "Zoella",
-              last_name: "Zeebo",
-              description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
+                    last_name: "Zeebo",
+                    description: "",
+                    email: "zoella" + email,
+                    avatar: "",
+                    password: pwd
             )
 Influencer.create!( pseudo: "#{zoella.first_name} #{zoella.last_name}",
                     fb_url: "https://www.facebook.com/zoe.zoella",
@@ -68,8 +74,9 @@ Influencer.create!( pseudo: "#{zoella.first_name} #{zoella.last_name}",
 christene = User.create!( first_name: "Christene",
               last_name: "Barberich",
               description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
+              email: "christene" + email,
+              avatar: "",
+              password: pwd
             )
 Influencer.create!( pseudo: "#{christene.first_name} #{christene.last_name}",
                     fb_url: "https://www.facebook.com/refinery29/",
@@ -88,8 +95,9 @@ Influencer.create!( pseudo: "#{christene.first_name} #{christene.last_name}",
 devyni = User.create!( first_name: "Devyni",
               last_name: "Hightower",
               description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
+              email: "devyni" + email,
+              avatar: "",
+              password: pwd
             )
 Influencer.create!( pseudo: "#{devyni.first_name} #{devyni.last_name}",
                     fb_url: "https://www.facebook.com/DEVYNIstyles/",
@@ -108,8 +116,9 @@ Influencer.create!( pseudo: "#{devyni.first_name} #{devyni.last_name}",
 chiara = User.create!( first_name: "Chiara",
               last_name: "Ferragni",
               description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
+              email: "chiara" + email,
+              avatar: "",
+              password: pwd
             )
 Influencer.create!( pseudo: "#{chiara.first_name} #{chiara.last_name}",
                     fb_url: "https://www.facebook.com/theblondesalad/",
@@ -128,8 +137,9 @@ Influencer.create!( pseudo: "#{chiara.first_name} #{chiara.last_name}",
 mariano = User.create!( first_name: "Mariano",
               last_name: "Di Vaio",
               description: "",
-              email: first_name.downcase + "divaio" + email,
-              avatar: ""
+              email: "mariano" + email,
+              avatar: "",
+              password: pwd
             )
 Influencer.create!( pseudo: "#{mariano.first_name} #{mariano.last_name}",
                     fb_url: "https://www.facebook.com/MARIANODIVAIO.FANPAGE/",
@@ -152,8 +162,9 @@ In March 2012, he opened his own blog,that allowed him to become, in 18 months, 
 amy = User.create!( first_name: "Amy",
               last_name: "Porterfield",
               description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
+              email: "amy" + email,
+              avatar: "",
+              password: pwd
             )
 Influencer.create!( pseudo: "#{amy.first_name} #{amy.last_name}",
                     fb_url: "https://www.facebook.com/AmyPorterfield",
@@ -172,8 +183,9 @@ Influencer.create!( pseudo: "#{amy.first_name} #{amy.last_name}",
 melanie = User.create!( first_name: "Melanie",
               last_name: "Duncan",
               description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
+              email: "melanie" + email,
+              avatar: "",
+              password: pwd
             )
 Influencer.create!( pseudo: "#{melanie.first_name} #{melanie.last_name}",
                     fb_url: "https://www.facebook.com/pg/EntrepreneuressAcademy",
@@ -192,28 +204,9 @@ Influencer.create!( pseudo: "#{melanie.first_name} #{melanie.last_name}",
 jonathon = User.create!( first_name: "Jonathon",
               last_name: "Colman",
               description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
-            )
-Influencer.create!( pseudo: "#{jonathon.first_name} #{jonathon.last_name}",
-                    fb_url: "https://www.facebook.com/jcolman",
-                    fb_followers: 1762,
-                    ig_url: "",
-                    ig_followers: 0,
-                    tw_username: "@jcolman",
-                    tw_followers: 16322,
-                    description: "Product UX + content strategy at Facebook. Keynote speaker, Webby Award winner, returned Peace Corps volunteer.",
-                    language: "English",
-                    avatar: "",
-                    banner_img: "",
-                    user: jonathon,
-                    category: new_tech
-                  )
-jonathon = User.create!( first_name: "Jonathon",
-              last_name: "Colman",
-              description: "",
-              email: first_name.downcase + last_name.downcase + email,
-              avatar: ""
+              email: "jonathon" + email,
+              avatar: "",
+              password: pwd
             )
 Influencer.create!( pseudo: "#{jonathon.first_name} #{jonathon.last_name}",
                     fb_url: "https://www.facebook.com/jcolman",
