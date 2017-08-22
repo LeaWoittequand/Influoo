@@ -1,15 +1,19 @@
 <!-- <div class="card_box"> -->
-  <div class="card">
-    <div class="card-photo">
-       <%= image_tag influencer.avatar, class: "card-avatar center-block" %>
-    </div>
-    <div class="card-description" align="center">
-      <h2> <%= influencer.pseudo %> </h2>
-      <p><%= influencer.language %></p>
-      <p><%= influencer.category %></p>
-    </div>
-
-
-    </div>
- <!--  </div> -->
+<div class="card">
+  <div class="card-photo">
+     <%= image_tag influencer.avatar, class: "card-avatar center-block" %>
+  </div>
+   <div class="card-description" align="center">
+    <h2> <%= influencer.pseudo %></h2>
+    <p><%= influencer.language %><i class="fa fa-flag" aria-hidden="true"></i></p>
+    <p><%= influencer.category.name %></p>
+  </div>
+  <div class="card-rs">
+   <ul class="fa-ul">
+    <li><i class="fa fa-facebook-square"></i> <%= influencer.fb_followers %></li>
+    <li><i class="fa fa-instagram"></i> <%= influencer.ig_followers %></li>
+    <li><i class="fa fa-twitter-square"></i> <%= influencer.tw_followers %></li>
+  </ul>
+  </div>
+</div>
 
