@@ -10,10 +10,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170822104640) do
+ActiveRecord::Schema.define(version: 20170822122000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "influencer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["influencer_id"], name: "index_favorites_on_influencer_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "influencers", force: :cascade do |t|
+    t.string "pseudo"
+    t.string "fb_url"
+    t.string "fb_followers"
+    t.string "ig_url"
+    t.string "ig_followers"
+    t.string "tw_username"
+    t.string "tw_followers"
+    t.text "description"
+    t.string "language"
+    t.string "avatar"
+    t.string "banner_img"
+    t.bigint "user_id"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_influencers_on_category_id"
+    t.index ["user_id"], name: "index_influencers_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "object"
+    t.text "content"
+    t.bigint "user_id"
+    t.bigint "influencer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["influencer_id"], name: "index_messages_on_influencer_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -36,4 +82,10 @@ ActiveRecord::Schema.define(version: 20170822104640) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favorites", "influencers"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "influencers", "categories"
+  add_foreign_key "influencers", "users"
+  add_foreign_key "messages", "influencers"
+  add_foreign_key "messages", "users"
 end
