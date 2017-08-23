@@ -5,12 +5,34 @@ class InfluencersController < ApplicationController
 
 
   def index
-    @category = params[:category]
-    @language = params[:language]
-    @pseudo = params[:pseudo]
-    @avatar = params[:avatar]
-    # @influencers = Influencer.all
-    @influencers = policy_scope(Influencer)
+     @influencers = policy_scope(Influencer)
+    if params[:search]
+
+      @category = Category.find(params[:search][:category].to_i)
+
+      @language = params[:search][:language]
+      @pseudo = params[:pseudo]
+      @avatar = params[:avatar]
+      @platform = params[:search][:platform]
+
+      if @category != ''
+        @influencers = Influencer.where(category: @category)
+      end
+      if @language != ''
+        @influencers = @influencers.where(language: @language)
+      end
+      if @platform != ''
+        case @platform
+        when "Facebook"
+          @influencers = @influencers.where("fb_url != ?", "")
+        when "Instagram"
+          @influencers = @influencers.where("ig_url != ?", "")
+        when "Twitter"
+          @influencers = @influencers.where("tw_username != ?", "")
+        end
+      end
+    end
+
   end
 
   def show
