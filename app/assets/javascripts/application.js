@@ -1,7 +1,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require_tree .
 
 (function() {
   $(document).on('click', '.toggle-window', function(e) {
