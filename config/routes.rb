@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'messages/new'
+
+  get 'messages/create'
+
+  get 'conversations/index'
+
+  get 'conversations/show'
+
+  get 'conversations/new'
+
+  get 'conversations/create'
+
   resources :favorites, only: [:index, :create, :destroy]
   resources :messages, only: [:index, :show, :new, :create]
   resources :influencers
