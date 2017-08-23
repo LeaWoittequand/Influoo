@@ -5,7 +5,7 @@ new_tech = Category.create!(name: "New Tech")
 pwd = "123456"
 fashion_banner = "http://lorempixel.com/800/200/fashion/"
 new_tech_banner = "http://lorempixel.com/800/200/technics/"
-avatar_url = "http://lorempixel.com/100/100/people/"
+avatar_url = "http://lorempixel.com/150/150/people/"
 
 User.create!( first_name: "Lea",
               last_name: "Woittequand",
