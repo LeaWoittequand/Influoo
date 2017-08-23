@@ -5,6 +5,11 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @messages = Message.all.where(user: current_user)
+    @conversations = Conversation.all
+    session[:conversations] ||= []
+
+    @users = User.all.where.not(id: current_user)
+    @conversations = Conversation.includes(:recipient, :messages)
+                                 .find(session[:conversations])
   end
 end
