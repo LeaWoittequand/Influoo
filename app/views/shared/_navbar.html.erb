@@ -1,18 +1,60 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-  <%= image_tag "logo.png" %>
-  <% end %>
+<div class="navbar navbar-inverse navbar-fixed-top transparent-header yamm" role="navigation" style="background: transparent;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/logo-white.png" alt="ASSAN"></a>
+    </div>
 
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+<% if user_signed_in? %>
 
-    <% if user_signed_in? %>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown active">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
+        <ul class="dropdown-menu multi-level dark-dropdown" role="menu" aria-labelledby="dropdownMenu">
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Sliders </a>
 
-    <!-- Links when logged in -->
-    <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+            <ul class="dropdown-menu dark-dropdown">
+              <li><a href="index.html">Revolution Full-width</a></li>
+              <li><a href="home-revolution-boxed.html">Revolution Boxed</a></li>
+              <li><a href="home-revolution-fullscreen.html">Revolution Fullscreen</a></li>
+              <li><a href="ken-burns.html">Ken burns Slider</a></li>
+              <li><a href="home-carousel.html">Carousel Slider</a></li>
+              <li><a href="home-flexslider.html">Flex slider</a></li>
+            </ul>
+          </li>
+
+
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Revolution 5</a>
+            <ul class="dropdown-menu  dark-dropdown">
+              <li><a href="r5-classic.html">Carousel classic</a></li>
+              <li><a href="r5-gym.html">Slider Gym</a></li>
+            </ul>
+          </li>
+          <li><a href="home-parallax.html">Home - Parallax</a></li>
+          <li><a href="home-youtube-hero.html">Home -Youtube hero</a></li><li><a href="home-self-video.html">Home - Self Video</a></li>
+          <li><a href="home-boxed.html">Home - Boxed</a></li>
+          <li><a href="home-construction.html">Home - Construction</a></li>
+          <li><a href="home-portfolio.html">Home - Portfolio</a></li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Multi level menu </a>
+            <ul class="dropdown-menu dark-dropdown">
+              <li><a href="#"> menu level 2</a></li>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">menu level 2 </a>
+                <ul class="dropdown-menu dark-dropdown">
+                  <li><a href="#"> menu level 3</a></li>
+                  <li><a href="#"> menu level 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
 
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
@@ -44,16 +86,9 @@
     <% end %>
   </div>
 
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        </ul>
+        </li><!--features-->
       </ul>
-    </div>
-  </div>
-</div>
+      </div><!--/.nav-collapse -->
+      </div><!--container-->
 
