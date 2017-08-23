@@ -1,10 +1,35 @@
 Rails.application.routes.draw do
 
+
+  resources :conversations, only: [:create] do
+    resources :messages, only: [:create]
+    member do
+      post :close
+    end
+  end
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+
   resources :favorites, only: [:index, :create, :destroy]
-  resources :messages, only: [:index, :show, :new, :create]
   resources :influencers
 
-  devise_for :users
+  get "/dashboard" => "pages#dashboard"
+  
+  devise_for :users,
+    controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
+
+  # get 'messages/new'
+
+  # get 'messages/create'
+
+  # get 'conversations/index'
+
+  # get 'conversations/show'
+
+  # get 'conversations/new'
+
+  # get 'conversations/create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
