@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+          <!-- Bootstrap -->
+        <link href="theme/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- custom css (blue color by default) -->
+        <link href="theme/css/style.css" rel="stylesheet" type="text/css" media="screen">
+
+        <!-- font awesome for icons -->
+        <link href="theme/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!-- flex slider css -->
+        <link href="theme/css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
+        <!-- animated css  -->
+        <link href="theme/css/animate.css" rel="stylesheet" type="text/css" media="screen">
+        <!--owl carousel css-->
+        <link href="theme/owl-carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="theme/owl-carousel/assets/owl.theme.default.css" rel="stylesheet" type="text/css" media="screen">
+        <!--mega menu -->
+        <link href="theme/css/yamm.css" rel="stylesheet" type="text/css">
+        <!--popups css-->
+        <link href="theme/css/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <title>Influoo</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -11,7 +30,10 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
