@@ -19,17 +19,19 @@
 .card-photo {
   position: absolute;
   width: 100%;
-  top: -50px;
+  top: -70px;
   text-transform: uppercase;
   z-index: 2;
 }
 .card-avatar {
   border-radius: 50%;
+  width: 130px;
+  height: 130px;
 }
 .card-description {
   position: absolute;
   width: 100%;
-  top: 40px;
+  top: 60px;
   text-align: center;
 }
 .card-description h2 {

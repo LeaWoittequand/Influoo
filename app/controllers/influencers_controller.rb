@@ -9,7 +9,8 @@ class InfluencersController < ApplicationController
     @language = params[:language]
     @pseudo = params[:pseudo]
     @avatar = params[:avatar]
-    @influencers = Influencer.all
+    # @influencers = Influencer.all
+    @influencers = policy_scope(Influencer)
   end
 
   def show
@@ -18,9 +19,11 @@ class InfluencersController < ApplicationController
 
   def new
     @influencer = Influencer.new
+    authorize @influencer
   end
 
   def create
+    authorize @influencer
   end
 
   def edit
@@ -37,6 +40,7 @@ private
 
 def set_influencers
   @influencer = Influencer.find(params[:id])
+  authorize @influencer
 end
 
  def influencers_params
