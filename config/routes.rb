@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   resources :favorites, only: [:index, :create, :destroy]
   resources :messages, only: [:index, :show, :new, :create]
   resources :influencers
