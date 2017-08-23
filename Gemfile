@@ -17,6 +17,9 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
