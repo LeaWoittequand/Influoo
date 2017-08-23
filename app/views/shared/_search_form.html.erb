@@ -1,4 +1,5 @@
-<div class="container search_form">
+<div class="container search_form" style="background-color: #FFC8C8; margin-top: 100px">
+
   <%= simple_form_for :search, url: influencers_path, method: 'get'  do |f| %>
     <div class="row">
       <div class="col-xs-12 col-sm-3"><%= f.input :language, collection: ["French", "Spanish", "English"] , prompt: "Language", label: false%></div>
