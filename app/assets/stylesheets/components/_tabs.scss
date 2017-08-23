@@ -1,0 +1,26 @@
+.mb30 {
+    margin-bottom: 30px !important;
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+}
+.nav-tabs .nav-item {
+    margin-bottom: -1px;
+}
+.nav-tabs li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.tabs-default.nav-tabs.nav-tabs .nav-link {
+    border-top: 3px solid transparent;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    font-weight: 400;
+}

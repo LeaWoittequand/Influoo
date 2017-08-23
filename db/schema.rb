@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20170823114827) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "conversations", force: :cascade do |t|
+    t.integer "recipient_id"
+    t.integer "sender_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
+    t.index ["sender_id"], name: "index_conversations_on_sender_id"
+  end
+
   create_table "favorites", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "influencer_id"
@@ -51,13 +60,12 @@ ActiveRecord::Schema.define(version: 20170823114827) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string "object"
     t.text "content"
     t.bigint "user_id"
-    t.bigint "influencer_id"
+    t.bigint "conversation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["influencer_id"], name: "index_messages_on_influencer_id"
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
@@ -92,6 +100,6 @@ ActiveRecord::Schema.define(version: 20170823114827) do
   add_foreign_key "favorites", "users"
   add_foreign_key "influencers", "categories"
   add_foreign_key "influencers", "users"
-  add_foreign_key "messages", "influencers"
+  add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
 end

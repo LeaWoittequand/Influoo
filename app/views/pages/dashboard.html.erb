@@ -1,0 +1,42 @@
+<div class="container">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs tabs-default mb30" role="tablist">
+    <li class="nav-item active" role="presentation"><a class="nav-link active" href="#inbox" aria-controls="inbox" role="tab" data-toggle="tab" aria-expanded="true">Inbox</a></li>
+    <li class="nav-item" role="presentation"><a class="nav-link" href="#profile" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">Profile</a></li>
+    <li class="nav-item" role="presentation"><a class="nav-link" href="#favorites" aria-controls="favorites" role="tab" data-toggle="tab" aria-expanded="false">Favorites</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active" id="inbox" aria-expanded="true">
+    <div class="row">
+      <div class="col-md-9">
+        <ul id="conversations-list">
+          <% @conversations.each do |conversation| %>
+          <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">User list</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <% @users.each do |user| %>
+                <li><%= link_to user.first_name, conversations_path(user_id: user), remote: true, method: :post %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="profile" aria-expanded="false">
+      TEST profile
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="favorites" aria-expanded="false">
+      TEST favorites
+    </div>
+  </div>
+</div>
