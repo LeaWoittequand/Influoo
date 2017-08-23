@@ -5,16 +5,25 @@ class InfluencersController < ApplicationController
 
 
   def index
-    @influencers = Influencer.all
+    @category = params[:category]
+    @language = params[:language]
+    @pseudo = params[:pseudo]
+    @avatar = params[:avatar]
+    # @influencers = Influencer.all
+    @influencers = policy_scope(Influencer)
   end
 
   def show
+    @influencers = Influencer.all
   end
 
   def new
+    @influencer = Influencer.new
+    authorize @influencer
   end
 
   def create
+    authorize @influencer
   end
 
   def edit
@@ -31,10 +40,11 @@ private
 
 def set_influencers
   @influencer = Influencer.find(params[:id])
+  authorize @influencer
 end
 
  def influencers_params
-   params.require(:influencer).permit(:pseudo, :description, :language)
+   params.require(:influencer).permit(:pseudo, :description, :language, :category, :first_name, :last_name, :image, :avatar)
  end
 
 end

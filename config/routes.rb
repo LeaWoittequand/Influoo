@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
+
   resources :conversations, only: [:create] do
     resources :messages, only: [:create]
     member do
       post :close
     end
   end
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
 
   resources :favorites, only: [:index, :create, :destroy]
   resources :influencers
