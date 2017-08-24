@@ -4,15 +4,19 @@ class PagesController < ApplicationController
   def home
   end
 
+  def contact
+  end
+
+  def about
+  end
+
   def dashboard
     @conversations = Conversation.all
-    session[:conversations] ||= []
+    @user = current_user
 
     @users = User.all.where.not(id: current_user)
     @conversations = Conversation.includes(:recipient, :messages)
-                                 .find(session[:conversations])
+    # fail
   end
 
-  def test
-  end
 end
