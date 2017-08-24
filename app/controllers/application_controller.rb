@@ -15,10 +15,19 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
 
-  private
+  Rails.application.config.consider_all_requests_local
+  rescue_from Exception, :with => :render_404
+
+private
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
+
+
+  def render_404
+    render :template => 'pages/404', :layout => false, :status => :not_found
+  end
+
 end
 

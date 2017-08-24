@@ -8,12 +8,15 @@
   justify-content: center;
   background: center;
   height: 100vh;
-  color: white;
 }
-h1 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.btn-banner {
-  display: block;
+
+.banner-content {
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  .btn-banner {
+    display: block;
+    margin-top: 20px;
+  }
 }
