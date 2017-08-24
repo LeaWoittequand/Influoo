@@ -1,13 +1,17 @@
-<div class="container search_form" style="background-color: #FFC8C8; margin-top: 100px">
-
-  <%= simple_form_for :search, url: influencers_path, method: 'get'  do |f| %>
-    <div class="row">
-      <div class="col-xs-12 col-sm-3"><%= f.input :language, collection: ["French", "Spanish", "English"] , prompt: "Language", label: false%></div>
-           <div class="col-xs-12 col-sm-3"><%= f.input :platform, collection: ["Facebook", "Instagram", "Twitter"], prompt: "Platform", label: false%></div>
-           <div class="col-xs-12 col-sm-3"><%= f.input :category, collection: Category.all , prompt: "Category", label: false%></div>
-
+<div class="divide60"></div>
+<div class="container search_form">
+  <div class="row">
+    <%= simple_form_for :search, url: influencers_path, method: 'get', html: {class: 'charity-contact'}  do |f| %>
+      <div class="col-xs-12 col-sm-3">
+        <%= f.input :language, collection: ["French", "Spanish", "English"] , prompt: "Language", label: false, class: 'form-control'%>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <%= f.input :platform, collection: ["Facebook", "Instagram", "Twitter"], prompt: "Platform", label: false%>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <%= f.input :category, collection: Category.all , prompt: "Category", label: false%>
+      </div>
       <div class="col-xs-12 col-sm-3"><%= f.submit "Search", class: "btn btn-success" %></div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
