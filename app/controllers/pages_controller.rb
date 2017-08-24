@@ -12,4 +12,7 @@ class PagesController < ApplicationController
     @conversations = Conversation.includes(:recipient, :messages)
                                  .find(session[:conversations])
   end
+
+  def test
+  end
 end
