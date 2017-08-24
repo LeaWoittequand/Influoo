@@ -6,9 +6,11 @@ class PagesController < ApplicationController
 
   def dashboard
     @conversations = Conversation.all
+    @user = current_user
 
     @users = User.all.where.not(id: current_user)
     @conversations = Conversation.includes(:recipient, :messages)
+    # fail
   end
 
   def test
