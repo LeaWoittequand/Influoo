@@ -5,6 +5,7 @@ new_tech = Category.create!(name: "New Tech")
 pwd = "123456"
 fashion_banner = "http://lorempixel.com/800/200/fashion/"
 new_tech_banner = "http://lorempixel.com/800/200/technics/"
+sport_banner = "http://lorempixel.com/800/200/sports/"
 avatar_url = "http://lorempixel.com/150/150/people/"
 
 User.create!( first_name: "Lea",
@@ -224,4 +225,71 @@ Influencer.create!( pseudo: "#{jonathon.first_name} #{jonathon.last_name}",
                     banner_img: new_tech_banner,
                     user: jonathon,
                     category: new_tech
+                  )
+
+anne = User.create!( first_name: "Anne",
+                    last_name: "Dubndidu",
+                    description: "",
+                    email: "anne" + email,
+                    avatar: avatar_url,
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{anne.first_name} #{anne.last_name}",
+                    fb_url: "https://www.facebook.com/pg/annedubndidu/",
+                    fb_followers: 30901,
+                    ig_url: "https://www.instagram.com/annedubndidu/",
+                    ig_followers: 105000,
+                    tw_username: "@annedubndidu",
+                    tw_followers: 10300,
+                    description: "Je m'appelle Anne, j'habite entre Paris et Montpellier. J'ai vécu 1 an à Brighton et 1 an à Los Angeles où mon cœur demeure. Grande bavarde et curieuse, je partage sur cet espace mes inspirations mode et débrouille, mes réflexions sur la vie quotidienne, mes voyages, mes envies d’évasion et autres découvertes variées.",
+                    language: "French",
+                    avatar: avatar_url,
+                    banner_img: sport_banner,
+                    user: anne,
+                    category: sport
+                  )
+
+elise = User.create!( first_name: "Elise",
+                    last_name: "Roundtheworldgirl",
+                    description: "",
+                    email: "elise" + email,
+                    avatar: avatar_url,
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{elise.first_name} #{elise.last_name}",
+                    fb_url: "https://www.facebook.com/roundtheworldgirl/",
+                    fb_followers: 2023,
+                    ig_url: "https://www.instagram.com/roundtheworldgirl/",
+                    ig_followers: 320000,
+                    tw_username: "",
+                    tw_followers: 0,
+                    description: "Active living | Wilderness wandering | Photography | | Keen Ambassador ",
+                    language: "English",
+                    avatar: avatar_url,
+                    banner_img: sport_banner,
+                    user: elise,
+                    category: sport
+                  )
+
+yoann = User.create!( first_name: "Yoann",
+                    last_name: "Barelli",
+                    description: "",
+                    email: "yoann" + email,
+                    avatar: avatar_url,
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{yoann.first_name} #{yoann.last_name}",
+                    fb_url: "https://www.facebook.com/yoann.barelli.pro/",
+                    fb_followers: 69507,
+                    ig_url: "https://www.instagram.com/yoannbarelli/",
+                    ig_followers: 110000,
+                    tw_username: "",
+                    tw_followers: 0,
+                    description: "PRO MOUNTAIN BIKE ATHLETE !!!
+Everything takes another dimension in my life when I start to ride my bike like a mother fu***!",
+                    language: "French",
+                    avatar: avatar_url,
+                    banner_img: sport_banner,
+                    user: yoann,
+                    category: sport
                   )
