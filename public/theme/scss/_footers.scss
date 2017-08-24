@@ -61,7 +61,7 @@
     padding: 20px;
     background-color: #0c0c0c;
     border-top-left-radius: 6px;
-    border-top-right-radius:6px; 
+    border-top-right-radius:6px;
 }
 .news-form .form-control{
     @include border-radius (3px);
@@ -282,7 +282,7 @@ Footer light styles
         }
     }
     .footer-bottom{
-        padding-top: 30px;
+        padding-top: 5px;
         background-color: #eee;
         h3{
             margin-bottom: 30px;

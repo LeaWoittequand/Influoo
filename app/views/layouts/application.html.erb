@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+   <title><%= yield(:title_tag).blank? ? "Influoo" : yield(:title_tag) %></title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <meta name="description" content="Find your Influencer">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>assan - Professional theme</title>
 
     <!-- Bootstrap -->
     <link href="theme/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,10 +46,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <title>Influoo</title>
-  <%= csrf_meta_tags %>
-  <%= action_cable_meta_tag %>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
+
+
 </head>
   <body>
     <%= render 'shared/navbar' %>
