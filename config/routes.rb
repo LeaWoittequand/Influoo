@@ -21,6 +21,11 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
 
+  get '/contact' => 'pages#contact'
+  get '/about' => 'pages#about'
+
+
+
   # get 'messages/new'
 
   # get 'messages/create'

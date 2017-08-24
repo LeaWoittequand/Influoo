@@ -4,6 +4,12 @@ class PagesController < ApplicationController
   def home
   end
 
+  def contact
+  end
+
+  def about
+  end
+
   def dashboard
     @conversations = Conversation.all
     session[:conversations] ||= []
@@ -13,6 +19,4 @@ class PagesController < ApplicationController
                                  .find(session[:conversations])
   end
 
-  def test
-  end
 end
