@@ -19,7 +19,10 @@ class FavoritesController < ApplicationController
 
   def destroy
     influencer = Influencer.find(params[:id])
-    influencer.destroy
+    favorite = Favorite.find_by(influencer: influencer)
+    favorite.destroy
+    authorize(favorite)
+    redirect_back(fallback_location: root_path)
   end
 
 private

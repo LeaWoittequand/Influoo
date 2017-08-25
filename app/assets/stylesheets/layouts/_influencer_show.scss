@@ -27,6 +27,8 @@
   vertical-align: center;
   text-align: right;
   margin: 10px 15px;
+  position: relative;
+  z-index: 10000;
 }
 .influencer-description {
   background-color: $my-grey;

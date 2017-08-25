@@ -6,11 +6,8 @@
 
 
 
-  <% if current_user.favorites %>
-    <%= link_to favorites_path(id: influencer.id), method: :delete do %><span class="fa fa-heart coeur-rose"></span><% end %>
-  <% else %>
     <%= link_to favorites_path(id: influencer.id), method: :post do %><span class="fa fa-heart-o coeur"></span><% end %>
-  <% end %>
+
 
 
   <div class="card-description" align="center"><%= link_to '', influencer_path(influencer), class: "card-link"%>
