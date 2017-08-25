@@ -71,3 +71,13 @@
   top: 200px;
 }
 
+.coeur {
+  color: gray;
+  position: absolute;
+  top: -35px;
+  right: 5px;
+  z-index: 99;
+  &:hover{
+    color: red;
+  }
+}

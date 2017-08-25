@@ -3,8 +3,18 @@
   <div class="card-photo">
      <%= image_tag influencer.avatar, class: "card-avatar center-block" %>
   </div>
-   <div class="card-description" align="center">
-    <h2> <%= influencer.pseudo %><i class="fa fa-heart" aria-hidden="true"><%= link_to '', influencer_path(influencer), class: "card-link"%></i></h2>
+
+
+
+<%= link_to favorites_path(id: influencer.id), method: :post do %><span class="fa fa-heart-o coeur"></span><% end %>
+
+
+
+
+
+   <div class="card-description" align="center"><%= link_to '', influencer_path(influencer), class: "card-link"%>
+    <h2> <%= influencer.pseudo %></h2>
+
     <p><%= influencer.language %><i class="fa fa-flag" aria-hidden="true"></i></p>
     <p><%= influencer.category.name %></p>
   </div>
