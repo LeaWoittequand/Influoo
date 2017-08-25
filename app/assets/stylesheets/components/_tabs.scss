@@ -1,21 +1,28 @@
-.mb30 {
-    margin-bottom: 30px !important;
-}
+// .mb30 {
+//     margin-bottom: 30px !important;
+// }
 .nav-tabs {
     border-bottom: 1px solid #ddd;
 }
 .nav {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding-left: 0;
     list-style: none;
 }
-.nav-tabs .nav-item {
-    margin-bottom: -1px;
-}
 .nav-tabs li {
     display: list-item;
     text-align: -webkit-match-parent;
+    border-top: 1px solid #ddd;
+}
+#tab1 {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+#tab3 {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 .tabs-default.nav-tabs.nav-tabs .nav-link {
     border-top: 3px solid transparent;
@@ -24,6 +31,6 @@
     color: #333;
     font-weight: 400;
 }
-.inbox-container {
-  margin-top: 100px;
+.tab-content {
+  min-height: 500px;
 }
