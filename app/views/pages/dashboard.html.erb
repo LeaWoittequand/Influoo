@@ -44,7 +44,13 @@
         <% end %>
       </div>
       <div id="Favorites" class="tab-pane">
-
+        <div class="row">
+        <% @favorites.each do |favorite| %>
+          <div class="col-xs-12 col-sm-3 col-md-3">
+            <%= render "shared/card", influencer: favorite.influencer %>
+          </div>
+        <% end %>
+          </div>
       </div>
     </div>
   </div>
