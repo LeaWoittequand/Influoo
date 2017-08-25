@@ -2,7 +2,7 @@
 <html>
   <head>
 
-   <title><%= yield(:title_tag).blank? ? "Influoo" : yield(:title_tag) %></title>
+   <title><%= yield(:title_tag).blank? ? "Influoo" : "#{yield(:title_tag)} - Influoo" %></title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
 
