@@ -38,10 +38,11 @@
         </div>
       </div>
       <div id="Profile" class="tab-pane"">
-        <%= render 'devise/registrations/edit' %>
+        <h3>Edit your profile</h3>
         <% if  @user.influencer %>
            <%= render "influencers/form_edit_influencer" %>
         <% end %>
+        <%= render 'devise/registrations/edit' %>
       </div>
       <div id="Favorites" class="tab-pane">
         <div class="row">

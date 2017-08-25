@@ -1,6 +1,6 @@
 class InfluencersController < ApplicationController
 
-  before_action :set_influencers, only: [:show, :edit]
+  before_action :set_influencers, only: [:show, :edit, :update]
   skip_before_action :authenticate_user!, only: [:index]
 
 
@@ -61,6 +61,8 @@ class InfluencersController < ApplicationController
   end
 
   def update
+
+    @influencer.update(influencer_params)
   end
 
   def destroy
@@ -74,8 +76,8 @@ def set_influencers
   authorize @influencer
 end
 
- def influencers_params
-   params.require(:influencer).permit(:pseudo, :description, :language, :category, :first_name, :last_name, :image, :avatar)
+ def influencer_params
+   params.require(:influencer).permit(:pseudo, :description, :language, :category_id, :first_name, :last_name, :image, :avatar)
  end
 
 end
