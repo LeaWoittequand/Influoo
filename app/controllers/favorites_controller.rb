@@ -1,25 +1,27 @@
 class FavoritesController < ApplicationController
+
   def index
-  end
-
-  def show
-  end
-
-  def new
+    @favorites = current_user.favorites
   end
 
   def create
+    @influencer =
+    @favorite = Favorite.new()
+
+    if @favorite.save
+      redirect_to influencer_path(@influencer)
     # @favorites = current_user.favorites.create(params[:user_id])
-  end
-
-  def edit
-  end
-
-  def update
   end
 
   def destroy
   end
+
+private
+
+  def favorites_params
+    params.require(:favorites).permit(:user, :infuencer)
+  end
+
 end
 
 

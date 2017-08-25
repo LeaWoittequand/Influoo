@@ -71,3 +71,9 @@
   top: 200px;
 }
 
+.coeur {
+  z-index: 99;
+  :hover{
+    color: red;
+  }
+}
