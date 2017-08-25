@@ -46,6 +46,15 @@ class InfluencersController < ApplicationController
 
   def create
     authorize @influencer
+  #   <-- Quand on aura dev la création de profil d'un influencer, on pourra tester les mails envoie automatique <-->
+    # @influencer = current_user.influencers.build(influencer_params)
+
+    # if @influencer.save
+    #   InfluencerMailer.creation_confirmation(@influencer).deliver_now
+    #   redirect_to influencer_path(@influencer)
+    # else
+    #   render :new
+    # end
   end
 
   def edit
