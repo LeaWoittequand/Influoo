@@ -1,4 +1,4 @@
-/* 
+/*
     Document   : assan
     Author     : Design_mylife
     Description:assan Themes kit
@@ -517,12 +517,12 @@ pre:after, pre:before {
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #32c5d2;
+  color: #d9534f;
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #32c5d2;
+  color: #d9534f;
   background-color: transparent;
 }
 
@@ -551,7 +551,7 @@ pre:after, pre:before {
 }
 
 .navbar-brand img {
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 
