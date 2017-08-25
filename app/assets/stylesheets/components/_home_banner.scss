@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   background: center;
-  height: 100vh;
+  height: 65vh;
 }
 
 .banner-content {
@@ -15,8 +15,14 @@
     text-align: center;
     color: white;
   }
+  p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
   .btn-banner {
     display: block;
     margin-top: 20px;
+    border-radius: 15px;
   }
 }
