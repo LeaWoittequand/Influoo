@@ -6,12 +6,10 @@
 }
 .nav {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding-left: 0;
     list-style: none;
-}
-.nav-tabs .nav-item {
-    margin-bottom: -1px;
 }
 .nav-tabs li {
     display: list-item;
