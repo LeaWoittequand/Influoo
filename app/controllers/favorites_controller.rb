@@ -18,6 +18,8 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
+    influencer = Influencer.find(params[:id])
+    influencer.destroy
   end
 
 private

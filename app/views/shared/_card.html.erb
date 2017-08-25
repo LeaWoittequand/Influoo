@@ -6,18 +6,20 @@
 
 
 
-<%= link_to favorites_path(id: influencer.id), method: :post do %><span class="fa fa-heart-o coeur"></span><% end %>
+  <% if current_user.favorites %>
+    <%= link_to favorites_path(id: influencer.id), method: :delete do %><span class="fa fa-heart coeur-rose"></span><% end %>
+  <% else %>
+    <%= link_to favorites_path(id: influencer.id), method: :post do %><span class="fa fa-heart-o coeur"></span><% end %>
+  <% end %>
 
 
-
-
-
-   <div class="card-description" align="center"><%= link_to '', influencer_path(influencer), class: "card-link"%>
+  <div class="card-description" align="center"><%= link_to '', influencer_path(influencer), class: "card-link"%>
     <h2> <%= influencer.pseudo %></h2>
 
     <p><%= influencer.language %><i class="fa fa-flag" aria-hidden="true"></i></p>
     <p><%= influencer.category.name %></p>
   </div>
+
   <div class="card-rs">
    <ul class="fa-ul">
     <li><i class="fa fa-facebook-square"></i> <%= influencer.fb_followers %></li>

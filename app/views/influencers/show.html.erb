@@ -11,7 +11,8 @@
     </div>
 
     <div class="influencer-contact">
-      <%= link_to 'Add to favorite', '', class: "btn btn-danger" %>
+
+      <%= link_to 'Add to favorite', 'favorites_path(id: influencer.id)', method: :post, class: "btn btn-danger" %>
       <%= link_to 'Contact', '', class: "btn btn-danger" %>
     </div>
 

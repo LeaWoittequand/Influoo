@@ -6,7 +6,7 @@
           <div class="col-md-4 col-sm-4 margin30">
               <h3>About</h3>
               <p>
-                  Influoo is the place to find the influencers that match your brand identity.
+                  Influoo is the place to find the influencers that match your brand identity. Enlarge your community through worldwide influencers.
               </p>
               <%= link_to 'About', about_path, class: "btn btn-danger" %>
 
@@ -16,13 +16,13 @@
               <h3>Choose your category</h3>
               <ul class="list-unstyled footer-news">
                   <li>
-                      <a href="#">Sports influencers</a>
+                      <%= link_to 'Fashion influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=1&commit=Search" %>
                   </li>
                    <li>
-                      <a href="#">Fashion influencers</a>
+                      <%= link_to 'Sport influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=2&commit=Search" %>
                   </li>
                    <li>
-                      <a href="#">Tech influencer</a>
+                      <%= link_to 'Tech influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=3&commit=Search" %>
                   </li>
               </ul>
 
@@ -39,6 +39,7 @@
               <p>
                   +33 945 674 545
               </p>
+              <p><%= link_to 'Contact us', contact_path, class: "btn btn-danger" %></p>
               </div>
 
           </div><!--col-->
