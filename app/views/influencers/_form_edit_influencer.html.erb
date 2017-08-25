@@ -1,0 +1,13 @@
+  <%= simple_form_for @user.influencer do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.input :pseudo %>
+    <%= f.input :fb_url %>
+    <%= f.input :ig_url %>
+    <%= f.input :description %>
+    <%= f.input :language, collection: ["French", "Spanish", "English"] , prompt: "Language", label: false, class: 'form-control'%>
+    <%= f.input :category, collection: Category.all , prompt: "Category", label: false%>
+
+    <%= f.submit "Je valide", class: "btn btn-success" %>
+
+  <% end %>
