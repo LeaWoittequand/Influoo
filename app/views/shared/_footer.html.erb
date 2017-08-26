@@ -8,7 +8,7 @@
               <p>
                   Influoo is the place to find the influencers that match your brand identity. Enlarge your community through worldwide influencers.
               </p>
-              <%= link_to 'About', about_path, class: "btn btn-danger" %>
+              <%= link_to 'About', about_path, class: "btn btn-danger btn-footer" %>
 
           </div>
           <!--col-->
@@ -16,13 +16,13 @@
               <h3>Choose your category</h3>
               <ul class="list-unstyled footer-news">
                   <li>
-                      <%= link_to 'Fashion influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=1&commit=Search" %>
+                      <%= link_to 'Fashion influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=1&commit=Search", class: "link-footer" %>
                   </li>
                    <li>
-                      <%= link_to 'Sport influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=2&commit=Search" %>
+                      <%= link_to 'Sport influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=2&commit=Search", class: "link-footer"  %>
                   </li>
                    <li>
-                      <%= link_to 'Tech influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=3&commit=Search" %>
+                      <%= link_to 'Tech influencers', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=3&commit=Search", class: "link-footer"  %>
                   </li>
               </ul>
 
@@ -39,7 +39,7 @@
               <p>
                   +33 945 674 545
               </p>
-              <p><%= link_to 'Contact us', contact_path, class: "btn btn-danger" %></p>
+              <p><%= link_to 'Contact us', contact_path, class: "btn btn-danger btn-footer" %></p>
               </div>
 
           </div><!--col-->
