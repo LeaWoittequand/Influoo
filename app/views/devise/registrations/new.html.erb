@@ -9,17 +9,17 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :first_name, required: true %>
-          <%= f.input :last_name, required: true %>
-          <%= f.input :description, required: true %>
-          <%= f.input :avatar, required: true %>
-          <%= f.input :email, required: true, autofocus: true %>
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, required: true %>
+          <%= f.input :first_name, label: false, required: true, placeholder: 'First name'%>
+          <%= f.input :last_name, label: false, required: true, placeholder: 'Last name' %>
+          <%= f.input :description, label: false, required: true, placeholder: 'Description (will be shown on your profile)' %>
+          <%= f.input :avatar, label: false, required: true, placeholder: 'Choose your avatar (url of the image)' %>
+          <%= f.input :email, label: false, required: true, autofocus: true, placeholder: 'Enter your Email' %>
+          <%= f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: 'Choose a password' %>
+          <%= f.input :password_confirmation, label: false, required: true, placeholder: 'Confirm your password' %>
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Sign up" %>
+          <%= f.button :submit, "Sign up", class: "btn btn-danger buton" %>
         </div>
         <% end %>
 
