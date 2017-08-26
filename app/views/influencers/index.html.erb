@@ -1,5 +1,12 @@
+<% content_for(:title_tag) do %>
+  INFLUENCERS
+<% end %>
 <div class="container text-center">
   <%= render "shared/search_form" %>
+</div>
+<div class="divide30"></div>
+<div class="main_title">
+  <h1>We have <%= @influencers.count %> influencers for you!</h1>
 </div>
 
 <div class="container result">
