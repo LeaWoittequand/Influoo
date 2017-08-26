@@ -1,7 +1,12 @@
-.logout {
-color : red;
-}
-
 .navbarbutton {
   top: 7px;
 }
+
+
+.fa-sign-out{
+  &:hover {
+  color: $my-pink;
+  }
+}
+
+
