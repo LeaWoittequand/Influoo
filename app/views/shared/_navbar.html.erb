@@ -16,7 +16,10 @@
         <% if user_signed_in? %>
 
         <li class="dropdown">
-          <%= link_to "Tableau de bord", dashboard_path, class: "navbarbutton" %>
+          <%= link_to "Dashboard", dashboard_path, class: "navbarbutton" %>
+          </li>
+        <li class="dropdown">
+          <%= link_to "All Influencers", influencers_path, class: "navbarbutton" %>
         </li>
 
         <li><%= link_to destroy_user_session_path, method: :delete, class: "logout" do %>

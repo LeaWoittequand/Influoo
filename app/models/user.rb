@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_one :influencer
   has_many :favorites
+  has_many :influencers, through: :favorites
   has_many :messages
   has_many :conversations, foreign_key: :sender_id
 
