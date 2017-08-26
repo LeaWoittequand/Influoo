@@ -1,10 +1,6 @@
-<% content_for(:title_tag) do %>
-  DASHBOARD
-<% end %>
-<div class="divide30"></div>
-<div class="main_title">
-  <h1><%= @user.first_name %> <%= @user.last_name %>'s Dahsboard</h1>
-</div>
+
+<%= render 'title_and_h1', user: current_user %>
+
 <div class="col-xs-12">
   <div class="tabs container">
     <ul class="nav nav-tabs">
@@ -14,31 +10,7 @@
     </ul>
     <div class="tab-content">
       <div id="inbox" class="tab-pane active">
-        <div class="row">
-          <div class="col-md-9">
-            <ul id="conversations-list">
-              <% @conversations.each do |conversation| %>
-                <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
-              <% end %>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">User list</h3>
-              </div>
-              <div class="panel-body">
-                <ul>
-                  <% @users.each do |user| %>
-                    <li>
-                      <%= link_to user.first_name, conversations_path(user_id: user), remote: true, method: :post %>
-                    </li>
-                  <% end %>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <%= render 'inbox', conversations: @conversations, users: @users %>
       </div>
       <div id="Profile" class="tab-pane"">
         <h3>Edit your profile</h3>
