@@ -1,0 +1,37 @@
+.buton {
+  border: 1px $my-pink solid;
+  background: none;
+  border-radius: 20px;
+  color: $my-pink;
+  display: block;
+  width: 100%;
+  &:hover{
+    background: $my-pink;
+    color: white;
+    border: white 1px solid;
+  }
+}
+.btn-link {
+  color: $my-grey;
+  text-align: center;
+  display: block;
+  &:hover {
+    color: gray;
+    text-decoration: none;
+  }
+}
+.btn-fb {
+  width: 100%;
+  border: 1px $my-blue solid;
+  background: none;
+  border-radius: 20px;
+  color: $my-blue;
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  &:hover{
+    background: $my-blue;
+    color: white;
+    border: white 1px solid;
+  }
+}
