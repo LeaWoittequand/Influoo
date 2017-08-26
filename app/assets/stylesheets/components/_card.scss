@@ -7,6 +7,8 @@
   position: relative;
   margin-bottom: 25px;
   margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px $my-lightgrey;
 }
 .card-user {
   position: absolute;
@@ -31,16 +33,26 @@
 .card-description {
   position: absolute;
   width: 100%;
-  top: 60px;
+  top: 65px;
   text-align: center;
 }
 .card-description h2 {
   font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 30px;
+  text-shadow: 3px 3px $my-lightgrey;
 }
 .card-description p {
   font-size: 14px;
   opacity: 0.7;
   font-weight: lighter;
+  z-index: 2;
+}
+.search-tags{
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  width: 100%;
 }
 .card-link {
   position: absolute;
@@ -51,6 +63,7 @@
   z-index: 2;
   background: black;
   opacity: 0;
+  border-radius: 10px;
 }
 .card-link:hover {
   opacity: 0.1;
@@ -68,14 +81,22 @@
 .card-rs {
   position: absolute;
   width: 100%;
-  top: 200px;
+  top: 130px;
+}
+.followers {
+  // text-align: center;
+  position: relative;
+  left: 85px;
+  line-height: 5px;
+  font-size: 0.8em;
+  color: $my-lightgrey;
 }
 
 .coeur {
   color: gray;
   position: absolute;
-  top: -35px;
-  right: 5px;
+  top: 10px;
+  right: 0px;
   z-index: 99;
   &:hover{
     color: red;
