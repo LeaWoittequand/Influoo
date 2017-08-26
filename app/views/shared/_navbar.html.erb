@@ -22,8 +22,8 @@
           <%= link_to "All Influencers", influencers_path, class: "navbarbutton" %>
         </li>
 
-        <li><%= link_to destroy_user_session_path, method: :delete, class: "logout" do %>
-        <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+        <li><%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fa fa-sign-out"></i><%= t(".sign_out", default: "Log out") %>
         </li>
         <% end %>
 
