@@ -1,0 +1,30 @@
+.pricing-simple {
+  background-color: white;
+  border-radius: 10px;
+  border: 0px;
+}
+
+.fa-check-square:before {
+    color: #2E426B;
+}
+
+.fa-square-o:before {
+    color: #2E426B;
+}
+
+.btn btn-danger {
+    display: block;
+    margin-top: 20px;
+    border-radius: 30px;
+    position: relative;
+    height: 40px;
+    width: 150px;
+  }
+  .btn {
+    padding: 9px 12px;
+  }
+  .btn:hover{
+    background-color: #2E426B;
+    border: 0px;
+  }
+
