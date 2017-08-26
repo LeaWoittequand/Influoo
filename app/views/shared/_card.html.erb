@@ -13,16 +13,23 @@
   <div class="card-description" align="center"><%= link_to '', influencer_path(influencer), class: "card-link"%>
     <h2> <%= influencer.pseudo %></h2>
 
-    <p><%= influencer.language %><i class="fa fa-flag" aria-hidden="true"></i></p>
-    <p><%= influencer.category.name %></p>
+
   </div>
 
   <div class="card-rs">
+    <p class="followers">Followers</p>
    <ul class="fa-ul">
     <li><i class="fa fa-facebook-square"></i> <%= influencer.fb_followers %></li>
     <li><i class="fa fa-instagram"></i> <%= influencer.ig_followers %></li>
     <li><i class="fa fa-twitter-square"></i> <%= influencer.tw_followers %></li>
   </ul>
+  </div>
+  <div class="search-tags">
+    <p>
+      <%= influencer.language %>
+      <i class="fa fa-flag" aria-hidden="true"></i>
+      <%= influencer.category.name %>
+    </p>
   </div>
   <div>
   <%= link_to '', influencer_path(influencer), class: "card-link"%>

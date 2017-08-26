@@ -35,7 +35,6 @@
     border: white 1px solid;
   }
 }
-
 .btn-footer {
   border: 1px $my-pink solid;
   background: none;
@@ -48,5 +47,15 @@
     border: white 1px solid;
   }
 }
-
-
+.buton-profile {
+  border: 1px $my-pink solid;
+  background: none;
+  border-radius: 20px;
+  color: $my-pink;
+  margin-top: 5px;
+  &:hover{
+    background: $my-pink;
+    color: white;
+    border: white 1px solid;
+  }
+}

@@ -13,12 +13,12 @@
     <div class="influencer-contact">
 
     <% if current_user.influencers.include?(@influencer) %>
-      <%= link_to 'Remove from favorite', favorite_path(@influencer), method: :delete, class: "btn btn-danger" %>
+      <%= link_to 'Remove from favorite', favorite_path(@influencer), method: :delete, class: "btn btn-danger buton" %>
     <% else %>
-      <%= link_to 'Add to favorite', favorites_path(id: @influencer.id), method: :post, class: "btn btn-danger" %>
+      <%= link_to 'Add to favorite', favorites_path(id: @influencer.id), method: :post, class: "btn btn-danger buton-profile" %>
     <% end %>
 
-      <%= link_to 'Contact', '', class: "btn btn-danger" %>
+      <%= link_to 'Contact', '', class: "btn btn-danger buton-profile" %>
     </div>
 
     <div class="influencer-infos text-center">
@@ -34,39 +34,39 @@
     <div class="social-container">
       <div class="cards-container col-xs-12 col-sm-6 col-md-6">
 
-        <div class="card fb-card">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-          <i class="fa fa-thumbs-up" aria-hidden="true"> <%= @influencer.fb_followers %> </i>
-          <i class="fa fa-eye" aria-hidden="true"> 100K </i>
+        <div class="card-show fb-card">
+          <li><i class="fa fa-facebook-square social-media" aria-hidden="true"></i></li>
+          <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p><%= @influencer.fb_followers %></p></li>
+          <li><i class="fa fa-eye" aria-hidden="true"></i><p> 100K </p></li>
         </div>
 
-        <div class="card tw-card">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-          <i class="fa fa-thumbs-up" aria-hidden="true"> <%= @influencer.tw_followers %> </i>
+        <div class="card-show tw-card">
+          <li><i class="fa fa-twitter-square social-media" aria-hidden="true"></i></li>
+          <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p><%= @influencer.tw_followers %></p></li>
         </div>
 
-        <div class="card ig-card">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-          <i class="fa fa-thumbs-up" aria-hidden="true"> <%= @influencer.ig_followers %> </i>
+        <div class="card-show ig-card">
+          <li><i class="fa fa-instagram social-media" aria-hidden="true"></i></li>
+          <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p> <%= @influencer.ig_followers %></p> </li>
         </div>
 
       </div>
 
-      <div class="pictures-container col-xs-12 col-sm-6 col-md-6">
+      <div class="pictures-container col-xs-12 col-sm-6 col-md-6" %>
 
-        <div> <%= image_tag 'http://lorempixel.com/300/150/people/', class: "col-xs-12" %>
+        <div> <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-6 img-show" %>
         </div>
 
         <div>
-          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-6" %>
+          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-6 img-show" %>
         </div>
 
         <div>
-          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-6" %>
+          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-6 img-show" %>
         </div>
 
         <div>
-          <%= image_tag 'http://lorempixel.com/300/150/people/', class: "col-xs-12" %>
+          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-6 img-show" %>
         </div>
 
       </div>
