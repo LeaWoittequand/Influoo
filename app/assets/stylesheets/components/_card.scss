@@ -36,21 +36,22 @@
   top: 65px;
   text-align: center;
 }
-.search-tags{
-  position: absolute;
-  bottom: 5px;
-  text-align: center;
-  width: 100%;
-}
 .card-description h2 {
   font-size: 20px;
   margin-bottom: 20px;
   line-height: 30px;
+  text-shadow: 3px 3px $my-lightgrey;
 }
 .card-description p {
   font-size: 14px;
   opacity: 0.7;
   font-weight: lighter;
+}
+.search-tags{
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  width: 100%;
 }
 .card-link {
   position: absolute;
@@ -61,6 +62,7 @@
   z-index: 2;
   background: black;
   opacity: 0;
+  border-radius: 10px;
 }
 .card-link:hover {
   opacity: 0.1;
