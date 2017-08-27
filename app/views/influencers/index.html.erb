@@ -14,9 +14,7 @@
     <div class="container_card">
       <div class="row">
         <% @influencers.each do |influencer| %>
-        <div class="col-xs-6 col-sm-4 col-md-3">
           <%= render "shared/card", influencer: influencer %>
-        </div>
         <% end %>
       </div>
     </div>

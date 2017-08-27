@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :influencers
 
   get "/dashboard" => "pages#dashboard"
+  get "/dashboard_profile" => "pages#dashboard_profile"
+  get "/dashboard_favorites" => "pages#dashboard_favorites"
   get "test" => "pages#test"
 
   devise_for :users,

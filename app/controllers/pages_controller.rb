@@ -11,6 +11,20 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    dashboard_variables
+  end
+
+  def dashboard_profile
+    dashboard_variables
+  end
+
+  def dashboard_favorites
+    dashboard_variables
+  end
+
+  private
+
+  def dashboard_variables
     @user = current_user
 
     @users = User.all.where.not(id: current_user)
@@ -18,5 +32,4 @@ class PagesController < ApplicationController
 
     @favorites = @user.favorites
   end
-
 end
