@@ -13,7 +13,7 @@
     <div class="influencer-contact">
 
     <% if current_user.influencers.include?(@influencer) %>
-      <%= link_to 'Remove from favorite', favorite_path(@influencer), method: :delete, class: "btn btn-danger buton" %>
+      <%= link_to 'Remove from favorite', favorite_path(@influencer), method: :delete, class: "btn btn-danger buton-profile" %>
     <% else %>
       <%= link_to 'Add to favorite', favorites_path(id: @influencer.id), method: :post, class: "btn btn-danger buton-profile" %>
     <% end %>
