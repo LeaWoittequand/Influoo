@@ -1,4 +1,8 @@
-<h3>Edit your influencer profile</h3>
+<div class="divide30"></div>
+<div class="title link-big">
+  <h3>Edit your influencer profile</h3>
+</div>
+<div class="divide30"></div>
 <%= simple_form_for @user.influencer, url: influencer_path(@user.influencer), html: { method: :put } do |f| %>
   <%= f.error_notification %>
 
@@ -14,3 +18,4 @@
     <%= link_to "See your profile", influencer_path(@user.influencer), class: "btn buton-profile" %>
   </div>
 <% end %>
+<div class="divide50"></div>
