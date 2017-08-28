@@ -1,4 +1,5 @@
 <%= render 'title_and_h1', user: current_user %>
+<div class="divide30"></div>
 <div class="container">
   <div class="col-xs-12">
     <div class="tabs container">
@@ -26,3 +27,10 @@
   </div>
 </div>
 <div class="divide60"></div>
+<% if params[:influencer_id] && params[:influencer_id] != '' %>
+  <%= content_for :after_js do %>
+    <script>
+      $('#pb<%= params[:influencer_id] %>').show()
+    </script>
+  <% end %>
+<% end %>
