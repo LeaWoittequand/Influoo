@@ -1,19 +1,18 @@
-
-<div class="divide60"></div>
-<div class="container search_form">
-  <div class="row search_bar">
+<div class="row search_bar">
+  <div class="container search_form">
     <%= simple_form_for :search, url: influencers_path, method: 'get', html: {class: 'charity-contact'}  do |f| %>
-      <div class="col-xs-12 col-sm-3">
-        <%= f.input :language, collection: ["French", "Spanish", "English"] , prompt: "Language", label: false, placeholder: 'Language', class: 'form-control'%>
-      </div>
-      <div class="col-xs-12 col-sm-3">
-        <%= f.input :platform, collection: ["Facebook", "Instagram", "Twitter"], prompt: "Platform", label: false, placeholder: 'Platform'%>
-      </div>
-      <div class="col-xs-12 col-sm-3">
-        <%= f.input :category, collection: Category.all , prompt: "Category", label: false, placeholder: 'Category'%>
-      </div>
+    <div class="col-xs-12 col-sm-3">
+      <%= f.input :language, collection: ["French", "Spanish", "English"] , prompt: "Language", label: false, placeholder: 'Language', class: 'form-control'%>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <%= f.input :platform, collection: ["Facebook", "Instagram", "Twitter"], prompt: "Platform", label: false, placeholder: 'Platform'%>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <%= f.input :category, collection: Category.all , prompt: "Category", label: false, placeholder: 'Category'%>
+    </div>
 
-      <div class="col-xs-12 col-sm-3"><%= f.submit "Search for influencers", class: "btn btn-danger btn-footer" %></div>
+    <div class="col-xs-12 col-sm-3"><%= f.submit "Search for influencers", class: "btn btn-danger btn-footer search_button" %></div>
     <% end %>
   </div>
+</div>
 </div>

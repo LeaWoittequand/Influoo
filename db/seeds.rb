@@ -14,6 +14,7 @@ require "rest-client"
 
 require 'twitter'
 
+Subscription.create!(sku: 'subscription', name:'premium', price: 30)
 
 User.create!( first_name: "Lea",
               last_name: "Woittequand",
@@ -324,11 +325,3 @@ Everything takes another dimension in my life when I start to ride my bike like 
                     user: yoann,
                     category: sport
                   )
-
-
-
-
-
-
-
-

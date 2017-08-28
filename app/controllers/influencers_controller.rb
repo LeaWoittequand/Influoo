@@ -7,8 +7,11 @@ class InfluencersController < ApplicationController
   def index
      @influencers = policy_scope(Influencer)
     if params[:search]
-
-      @category = Category.find(params[:search][:category].to_i)
+      if params[:search][:category].to_i == 0
+        @category = ''
+      else
+        @category = Category.find(params[:search][:category].to_i)
+      end
 
       @language = params[:search][:language]
       @pseudo = params[:pseudo]

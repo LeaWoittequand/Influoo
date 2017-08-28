@@ -2,9 +2,13 @@ ul {
   padding-left: 0px;
   list-style: none;
 }
+#inbox {
+  padding: 0 50px;
+  padding-top: 50px;
+}
 
 .messages-list {
-  max-height: 200px;
+  max-height: 400px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -14,6 +18,9 @@ ul {
   position: relative;
   background-color: #D9EDF7;
   border-color: #BCE8F1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   margin: 5px 20px;
   padding: 10px;
   float: right;
@@ -23,7 +30,29 @@ ul {
 .message-received {
   background-color: #F1F0F0;
   border-color: #EEEEEE;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   margin: 5px 20px;
   padding: 10px;
   float: left;
+}
+.toggle-window {
+  &:hover{
+    color: $my-pink;
+  }
+}
+.panel{
+  border-radius: 10px;
+  .panel-heading {
+    border-radius: 10px;
+  }
+  #message_content {
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+}
+.edit-form {
+  width: 100%;
+  padding: 0 25%;
 }

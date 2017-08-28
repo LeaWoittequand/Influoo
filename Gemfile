@@ -22,6 +22,10 @@ gem "pundit"
 gem 'rest-client'
 gem 'twitter', '6.1.0'
 gem 'instagram'
+gem 'coffee-script'
+gem 'money-rails'
+gem 'stripe'
+
 
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'

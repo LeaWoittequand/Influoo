@@ -1,4 +1,4 @@
-class ConversationPolicy < ApplicationPolicy
+class MessagePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -6,6 +6,6 @@ class ConversationPolicy < ApplicationPolicy
   end
 
   def create?
-    !user.nil?
+    !user.nil?  # Anyone can create a influencer
   end
 end

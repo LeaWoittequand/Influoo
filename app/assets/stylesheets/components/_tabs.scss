@@ -1,20 +1,21 @@
-// .mb30 {
-//     margin-bottom: 30px !important;
-// }
 .nav-tabs {
     border-bottom: 1px solid #ddd;
 }
 .nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding-left: 0;
     list-style: none;
 }
 .nav-tabs li {
     display: list-item;
+    flex: 1 1 33%;
     text-align: -webkit-match-parent;
     border-top: 1px solid #ddd;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
 }
 #tab1 {
   border-left: 1px solid #ddd;
@@ -33,4 +34,16 @@
 }
 .tab-content {
   min-height: 500px;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.tab-content a :hover {
+  color: $my-pink;
+}
+.tabs .nav-tabs li.active a:after {
+  background: $my-pink;
+}
+.tabs .nav-tabs li.active a {
+  color: $my-pink;
 }
