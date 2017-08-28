@@ -1,26 +1,36 @@
 <%= render 'title_and_h1', user: current_user %>
 <div class="divide30"></div>
-<div class="col-xs-12">
-  <div class="tabs container">
-    <ul class="nav nav-tabs">
-      <li class=""><a data-toggle="tab" id="tab1" href="#inbox" aria-expanded="true"> Inbox</a></li>
-      <li class="active"><a data-toggle="tab" id="tab2" href="#Profile" aria-expanded="false">Profile</a></li>
-      <li class=""><a data-toggle="tab" id="tab3" href="#Favorites" aria-expanded="false">Favorites</a></li>
-    </ul>
-    <div class="tab-content">
-      <div id="inbox" class="tab-pane">
-        <%= render 'inbox', conversations: @conversations, users: @users %>
-      </div>
-      <div id="Profile" class="tab-pane active">
-        <%= render 'profile_forms.html.erb', user: @user %>
-      </div>
-      <div id="Favorites" class="tab-pane">
-        <div class="row">
-          <% @favorites.each do |favorite| %>
-            <%= render "shared/card", influencer: favorite.influencer %>
-          <% end %>
+<div class="container">
+  <div class="col-xs-12">
+    <div class="tabs container">
+      <ul class="nav nav-tabs">
+        <li class=""><a data-toggle="tab" id="tab1" href="#inbox" aria-expanded="true"> Inbox</a></li>
+        <li class="active"><a data-toggle="tab" id="tab2" href="#Profile" aria-expanded="false">Profile</a></li>
+        <li class=""><a data-toggle="tab" id="tab3" href="#Favorites" aria-expanded="false">Favorites</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="inbox" class="tab-pane">
+          <%= render 'inbox', conversations: @conversations, users: @users %>
+        </div>
+        <div id="Profile" class="tab-pane active">
+          <%= render 'profile_forms.html.erb', user: @user %>
+        </div>
+        <div id="Favorites" class="tab-pane">
+          <div class="row">
+            <% @favorites.each do |favorite| %>
+              <%= render "shared/card", influencer: favorite.influencer %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="divide60"></div>
+<% if params[:influencer_id] && params[:influencer_id] != '' %>
+  <%= content_for :after_js do %>
+    <script>
+      $('#pb<%= params[:influencer_id] %>').show()
+    </script>
+  <% end %>
+<% end %>

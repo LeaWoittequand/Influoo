@@ -14,31 +14,31 @@
       <ul class="nav navbar-nav navbar-right">
 
         <% if user_signed_in? %>
-
-        <li class="dropdown">
-        <%= link_to "Mes favoris", dashboard_favorites_path, class: "navbarbutton" %>
+          <li class="dropdown">
+            <%= link_to "All Influencers", influencers_path, class: "navbarbutton" %>
           </li>
-        <li class="dropdown">
-          <%= link_to "All Influencers", influencers_path, class: "navbarbutton" %>
+          <li class="dropdown">
+          <%= link_to "Favorites", dashboard_favorites_path, class: "navbarbutton" %>
+            </li>
+          <li class="dropdown">
+            <%= link_to "Profile", dashboard_profile_path, class: "navbarbutton" %>
           </li>
-        <li class="dropdown">
-          <%= link_to "Dashboard", dashboard_path, class: "navbarbutton" %>
-        </li>
+          <li class="dropdown">
+            <%= link_to "Inbox", dashboard_path, class: "navbarbutton" %>
+          </li>
 
-        <li><%= link_to destroy_user_session_path, method: :delete do %>
-        <i class="fa fa-sign-out"></i><%= t(".sign_out", default: "Log out") %>
-        </li>
+          <li><%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fa fa-sign-out"></i><%= t(".sign_out", default: "Log out") %>
+          </li>
         <% end %>
 
         <% else %>
-        <li class="dropdown">
-          <a href="#" class=" dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lock"></i> Log In</a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-login-box animated fadeInUp">
-
-              <%= render "devise/sessions/new" %>
-
-          </div>
-        </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lock"></i> Log In</a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-login-box animated fadeInUp" style='width: 350px'>
+                <%= render "devise/sessions/new" %>
+            </div>
+          </li>
         <% end %>
       </ul><!--/.nav navbar-nav navbar-right -->
     </div><!--/.nav-collapse -->

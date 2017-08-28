@@ -1,4 +1,6 @@
-<% if  user.influencer %>
-<%= render "influencers/form_edit_influencer" %>
-<% end %>
-<%= render 'devise/registrations/edit' %>
+<div class="edit-form">
+  <% if  user.influencer %>
+  <%= render "influencers/form_edit_influencer" %>
+  <% end %>
+  <%= render 'devise/registrations/edit' %>
+</div>
