@@ -3,7 +3,16 @@
   text-align: center;
 }
 .main_title > h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   font-family: $headers-font;
+  font-weight: light;
   color: $headers-color;
+  margin-bottom: 30px;
+}
+
+.title > h3 {
+  font-family: $headers-font;
+  font-weight: light;
+  margin-left: 140px;
+  font-size: 1.4em;
 }
