@@ -34,3 +34,6 @@
 .tab-content {
   min-height: 500px;
 }
+.tabs .nav-tabs li.active a {
+    color: $my-pink;
+}
