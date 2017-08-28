@@ -19,6 +19,9 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem "pundit"
+gem 'coffee-script'
+gem 'money-rails'
+gem 'stripe'
 
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'

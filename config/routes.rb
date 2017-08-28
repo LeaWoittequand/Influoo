@@ -26,6 +26,12 @@ Rails.application.routes.draw do
   get '/contact' => 'pages#contact'
   get '/about' => 'pages#about'
 
+  root 'subscriptions#index'
+  resources :subscriptions, only: [:index, :show]
+
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: [:new, :create]
+  end
 
 
   # get 'messages/new'
