@@ -32,7 +32,8 @@ class User < ApplicationRecord
     return user
   end
 
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
+  # COMMENTED TO BYPASS Email sending on db:seed
 
   private
 

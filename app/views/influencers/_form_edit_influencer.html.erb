@@ -1,15 +1,21 @@
-  <%= simple_form_for @user.influencer, url: influencer_path(@user.influencer), html: { method: :put } do |f| %>
-    <%= f.error_notification %>
+<div class="divide30"></div>
+<div class="title link-big">
+  <h3>Edit your influencer profile</h3>
+</div>
+<div class="divide30"></div>
+<%= simple_form_for @user.influencer, url: influencer_path(@user.influencer), html: { method: :put } do |f| %>
+  <%= f.error_notification %>
 
-    <%= f.input :pseudo %>
-    <%= f.input :fb_url %>
-    <%= f.input :tw_username %>
-    <%= f.input :ig_url %>
-    <%= f.input :description %>
-    <%= f.input :language, collection: ["French", "Spanish", "English"] , prompt: "Language", label: false, class: 'form-control'%>
-    <%= f.input :category_id, collection: Category.all , prompt: "Category", label: false%>
-    <div class="text-center">
-      <%= f.submit "Update Influencer Profile", class: "btn btn-success" %>
-      <%= link_to "See your profile", influencer_path(@user.influencer), class: "btn btn-success" %>
-    </div>
-  <% end %>
+  <%= f.input :pseudo, label: "Your pseudo" %>
+  <%= f.input :fb_url, label: "Facebook url" %>
+  <%= f.input :tw_username, label: "Twitter username" %>
+  <%= f.input :ig_url, label: "Instagram url" %>
+  <%= f.input :description, label: "Describe yourself" %>
+  <%= f.input :language, collection: ["French", "Spanish", "English"] , prompt: "Language", label: false, label: "Choose your language", class: 'form-control'%>
+  <%= f.input :category_id, collection: Category.all , prompt: "Category", label: "Choose your category"%>
+  <div class="text-center">
+    <%= f.submit "Update Influencer Profile", class: "btn buton-profile" %>
+    <%= link_to "See your profile", influencer_path(@user.influencer), class: "btn buton-profile" %>
+  </div>
+<% end %>
+<div class="divide50"></div>

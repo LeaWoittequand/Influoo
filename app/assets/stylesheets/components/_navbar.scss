@@ -1,7 +1,10 @@
 .navbarbutton {
   top: 7px;
 }
-
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
 
 .fa-sign-out{
   &:hover {
