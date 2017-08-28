@@ -7,6 +7,10 @@
   background: center;
   background-image: linear-gradient(-225deg, rgba(78, 78, 78, 0.6) 0%, rgba(109, 109, 109, 0.6) 50%)
 }
+.influencer-banner {
+  overflow: hidden;
+  height: 40vh;
+}
 .influencer-avatar {
   position: relative;
 }

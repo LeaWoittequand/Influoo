@@ -19,6 +19,9 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem "pundit"
+gem 'rest-client'
+gem 'twitter', '6.1.0'
+gem 'instagram'
 
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
