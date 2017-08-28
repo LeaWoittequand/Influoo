@@ -293,3 +293,5 @@ Everything takes another dimension in my life when I start to ride my bike like 
                     user: yoann,
                     category: sport
                   )
+
+Subscription.create!(sku: 'subscription', name:'premium', price: 30)
