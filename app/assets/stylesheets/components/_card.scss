@@ -8,7 +8,7 @@
   margin-bottom: 25px;
   margin-top: 80px;
   border-radius: 10px;
-  box-shadow: 2px 2px 3px $my-lightgrey;
+  box-shadow: 3px 3px 3px $my-lightgrey;
 }
 .card-user {
   position: absolute;
@@ -86,10 +86,10 @@
 .followers {
   // text-align: center;
   position: relative;
-  left: 85px;
-  line-height: 5px;
+  left: 112px;
+  line-height: 8px;
   font-size: 0.8em;
-  color: $my-lightgrey;
+  color: $my-darkgrey;
 }
 
 .coeur {
@@ -111,4 +111,22 @@
   &:hover{
     color: gray;
   }
+}
+
+.container_card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.fa-facebook-square {
+  color: #3B5998;
+}
+
+.fa-instagram {
+  color: #EA4C89;
+}
+
+.fa-twitter-square {
+  color: #00ACEE;
 }
