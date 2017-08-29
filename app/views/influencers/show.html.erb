@@ -23,7 +23,12 @@
 
     <div class="influencer-infos text-center">
      <h3><%= @influencer.pseudo %></h3>
-      <p><%= @influencer.language %></p>
+      <% if @influencer.language == 'en' %>
+        <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" />
+      <% else %>
+        <p><img src="../../assets/images/blank.gif" class="flag flag-<%= @influencer.language %> small-flag" alt="" />
+      <% end %>
+
       <p><strong><%= @influencer.category.name %></strong></p>
     </div>
 
