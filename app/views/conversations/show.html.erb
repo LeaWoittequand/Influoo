@@ -5,8 +5,8 @@
     <div class="tabs container">
       <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" id="tab1" href="#inbox" aria-expanded="true"> Inbox</a></li>
-        <li class=""><a data-toggle="tab" id="tab2" href="#Profile" aria-expanded="false">Profile</a></li>
-        <li class=""><a data-toggle="tab" id="tab3" href="#Favorites" aria-expanded="false">Favorites</a></li>
+        <li><%= link_to 'Profile', dashboard_profile_path, id: "tab2" %></li>
+        <li><%= link_to 'Favorites', dashboard_favorites_path, id: "tab3" %></li>
       </ul>
       <div class="tab-content">
         <div id="inbox" class="tab-pane active">
