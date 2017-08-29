@@ -3,6 +3,13 @@ class ConversationsController < ApplicationController
   end
 
   def show
+    @user = current_user
+    @users = User.all.where.not(id: current_user)
+    @conversations = Conversation.includes(:recipient, :messages)
+    authorize(@conversations)
+    @conversation = Conversation.find(params[:id])
+
+    @favorites = @user.favorites
   end
 
   def new
