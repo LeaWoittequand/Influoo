@@ -30,6 +30,7 @@
               <%= link_to "Inbox", conversation_path(current_user.conversations.first), class: "navbarbutton" %>
             </li>
           <% end %>
+        <% end %>
 
           <li><%= link_to destroy_user_session_path, method: :delete do %>
           <i class="fa fa-sign-out"></i><%= t(".sign_out", default: "Log out") %>
