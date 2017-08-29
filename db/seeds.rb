@@ -281,47 +281,5 @@ Influencer.create!( pseudo: "#{anne.first_name} #{anne.last_name}",
                   )
 
 
-elise = User.create!( first_name: "Elise",
-                    last_name: "Roundtheworldgirl",
-                    description: "",
-                    email: "elise" + email,
-                    avatar: avatar_url,
-                    password: pwd
-            )
-Influencer.create!( pseudo: "#{elise.first_name} #{elise.last_name}",
-                    fb_url: "https://www.facebook.com/roundtheworldgirl/",
-                    fb_followers: 2023,
-                    ig_url: "https://www.instagram.com/roundtheworldgirl/",
-                    ig_followers: 320000,
-                    tw_username: "",
-                    tw_followers: 0,
-                    description: "Active living | Wilderness wandering | Photography | | Keen Ambassador ",
-                    language: "English",
-                    avatar: avatar_url,
-                    banner_img: sport_banner,
-                    user: elise,
-                    category: sport
-                  )
 
-yoann = User.create!( first_name: "Yoann",
-                    last_name: "Barelli",
-                    description: "",
-                    email: "yoann" + email,
-                    avatar: avatar_url,
-                    password: pwd
-            )
-Influencer.create!( pseudo: "#{yoann.first_name} #{yoann.last_name}",
-                    fb_url: "https://www.facebook.com/yoann.barelli.pro/",
-                    fb_followers: 69507,
-                    ig_url: "https://www.instagram.com/yoannbarelli/",
-                    ig_followers: 110000,
-                    tw_username: "",
-                    tw_followers: 0,
-                    description: "PRO MOUNTAIN BIKE ATHLETE !!!
-Everything takes another dimension in my life when I start to ride my bike like a mother fu***!",
-                    language: "French",
-                    avatar: avatar_url,
-                    banner_img: sport_banner,
-                    user: yoann,
-                    category: sport
-                  )
+
