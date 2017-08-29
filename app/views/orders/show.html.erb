@@ -1,6 +1,24 @@
-<h1>Order</h1>
-<ul>
-  <li>Status: <%= @order.state %></li>
-  <li>Item: <%= @order.subscription_sku %></li>
-  <li>Amount: <%= humanized_money_with_symbol(@order.amount) %></li>
-<ul>
+
+<div class="container">
+  <div class="divide30"></div>
+  <div class="main_title">
+  <h1>Your order</h1>
+  </div>
+  <div class="row col-sm-offset-4 col-sm-8 ">
+    <div class="col-sm-6">
+      <div class="pricing-simple popular" style="background-color: white">
+        <ul class="list-unstyled">
+          <li><i class="fa fa-certificate" aria-hidden="true" style="color: #2E426B"></i>Status: <%= @order.state %></li>
+          <li><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #2E426B"></i>Item: <%= @order.subscription_sku %></li>
+          <li><i class="fa fa-credit-card" aria-hidden="true" style="color: #2E426B"></i>Amount: <%= humanized_money_with_symbol(@order.amount) %> / month</li>
+        </ul>
+        <div style="text-align: center">
+        <%= link_to "Back home", root_path, class: "btn btn-danger btn-footer" %>
+        </div>
+        <div class="divide20"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

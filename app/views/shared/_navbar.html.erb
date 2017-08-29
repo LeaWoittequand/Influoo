@@ -17,6 +17,7 @@
           <li class="dropdown">
             <%= link_to "All Influencers", influencers_path, class: "navbarbutton" %>
           </li>
+        <% if Order.where(subscription_sku: "subscription-#{current_user.email}").first %>
           <li class="dropdown">
           <%= link_to "Favorites", dashboard_favorites_path, class: "navbarbutton" %>
             </li>
@@ -26,6 +27,7 @@
           <li class="dropdown">
             <%= link_to "Inbox", dashboard_path, class: "navbarbutton" %>
           </li>
+         <% end %>
 
           <li><%= link_to destroy_user_session_path, method: :delete do %>
           <i class="fa fa-sign-out"></i><%= t(".sign_out", default: "Log out") %>
