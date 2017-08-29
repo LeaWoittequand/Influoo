@@ -39,8 +39,10 @@ class InfluencersController < ApplicationController
 
   def show
     @influencers = Influencer.all
+    @influencer = Influencer.find(params[:id])
     @order = Order.where(subscription_sku: "subscription-#{current_user.email}").first
     @subscription = Subscription.all.last
+    session[:influencer_id] = @influencer.id
   end
 
   def new

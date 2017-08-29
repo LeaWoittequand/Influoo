@@ -13,7 +13,13 @@
           <li><i class="fa fa-credit-card" aria-hidden="true" style="color: #2E426B"></i>Amount: <%= humanized_money_with_symbol(@order.amount) %> / month</li>
         </ul>
         <div style="text-align: center">
-        <%= link_to "Back home", root_path, class: "btn btn-danger btn-footer" %>
+          <% if session[:influencer_id] %>
+            <%= link_to "Back", influencer_path(session[:influencer_id]), class: "btn
+        btn-danger btn-footer" %>
+          <% else %>
+            <%= link_to "Back homepage", root_path, class: "btn
+        btn-danger btn-footer" %>
+          <% end %>
         </div>
         <div class="divide20"></div>
       </div>
