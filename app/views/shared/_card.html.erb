@@ -16,11 +16,11 @@
       </ul>
     </div>
     <div class="search-tags">
-      <p>
-        <%= influencer.language %>
-        <i class="fa fa-flag" aria-hidden="true"></i>
-
-
+      <% if influencer.language == 'en' %>
+        <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" />
+      <% else %>
+        <p><img src="../../assets/images/blank.gif" class="flag flag-<%= influencer.language %> small-flag" alt="" />
+      <% end %>
         <%= influencer.category.name %>
       </p>
     </div>

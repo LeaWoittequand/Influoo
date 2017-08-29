@@ -96,7 +96,7 @@ Influencer.create!( pseudo: "#{zoella.first_name} #{zoella.last_name}",
                     category: fashion
                   )
 
-christene_tw = client.user("@Zozeebo")
+christene_tw = client.user("@CRBarberich")
 christene = User.create!( first_name: "Christene",
               last_name: "Barberich",
               description: "",
@@ -211,28 +211,28 @@ Influencer.create!( pseudo: "#{amy.first_name} #{amy.last_name}",
                     user: amy,
                     category: new_tech
                   )
-melanie_tw = client.user("@MelanieDuncan7")
-melanie = User.create!( first_name: "Melanie",
-              last_name: "Duncan",
-              description: "",
-              email: "melanie" + email,
-              avatar: melanie_tw.profile_image_url.to_s.gsub('_normal', ''),
-              password: pwd
-            )
-Influencer.create!( pseudo: "#{melanie.first_name} #{melanie.last_name}",
-                    fb_url: "https://www.facebook.com/pg/EntrepreneuressAcademy",
-                    fb_followers: 243298,
-                    ig_url: "",
-                    ig_followers: 0,
-                    tw_username: melanie_tw.screen_name,
-                    tw_followers: melanie_tw.followers_count,
-                    description: melanie_tw.description,
-                    language: melanie_tw.lang,
-                    avatar: melanie_tw.profile_image_url.to_s.gsub('_normal', ''),
-                    banner_img: melanie_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
-                    user: melanie,
-                    category: new_tech
-                  )
+# melanie_tw = client.user("@MelanieDuncan7")
+# melanie = User.create!( first_name: "Melanie",
+#               last_name: "Duncan",
+#               description: "",
+#               email: "melanie" + email,
+#               avatar: melanie_tw.profile_image_url.to_s.gsub('_normal', ''),
+#               password: pwd
+#             )
+# Influencer.create!( pseudo: "#{melanie.first_name} #{melanie.last_name}",
+#                     fb_url: "https://www.facebook.com/pg/EntrepreneuressAcademy",
+#                     fb_followers: 243298,
+#                     ig_url: "",
+#                     ig_followers: 0,
+#                     tw_username: melanie_tw.screen_name,
+#                     tw_followers: melanie_tw.followers_count,
+#                     description: melanie_tw.description,
+#                     language: melanie_tw.lang,
+#                     avatar: melanie_tw.profile_image_url.to_s.gsub('_normal', ''),
+#                     banner_img: melanie_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+#                     user: melanie,
+#                     category: new_tech
+#                   )
 jonathon_tw = client.user("@jcolman")
 jonathon = User.create!( first_name: "Jonathon",
               last_name: "Colman",

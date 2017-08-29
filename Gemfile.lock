@@ -346,8 +346,8 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-  twitter (= 6.1.0)
   stripe
+  twitter (= 6.1.0)
   uglifier
 
 RUBY VERSION
