@@ -2,12 +2,14 @@
 <html>
   <head>
 
-   <title><%= yield(:title_tag).blank? ? "Influoo - Boost your communication with influencers" : "#{yield(:title_tag)} - Influoo" %></title>
+   <title><%= yield(:title_tag).blank? ? "Influoo - Boost your communication with influencers" : "#{yield(:title_tag)} - Influoo Boost your communication with influencers" %></title>
     <%= favicon_link_tag %>
     <meta property="og:title" content="Influoo - Boost your communication with influencers' community.">
     <meta property="og:image" content="influoo.png">
     <meta property="og:description" content=" Social media are more than important for brands. On the other hand, some people came quickly influencers on Instagram, Facebook or Twitter, followed by a huge community of fans. We decided to provide the best advantage of the influencer community. Through our application and because our network is worldwide you will find easily the perfect influencer for your products. It will help to promote your brand and product to a new generation of people.">
     <meta property="og:site_name" content="Influoo"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Influoo - Boost your communication with influencers">
@@ -50,6 +52,7 @@
     <link href="/theme/css/yamm.css" rel="stylesheet" type="text/css">
     <!--popups css-->
     <link href="/theme/css/magnific-popup.css" rel="stylesheet" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

@@ -22,10 +22,12 @@
 .avatar {
   border-radius: 50%;
   border: 2px white solid;
+  height: 150px;
 }
 .influencer-content {
   background-color: white;
   padding-bottom: 20px;
+  border-radius: 10px;
 }
 .influencer-contact {
   vertical-align: center;
@@ -35,10 +37,19 @@
   z-index: 100;
 }
 .influencer-description {
-  background-color: $my-grey;
+  background-color: white;
   padding: 20px 50px;
   margin-left: 50px;
   margin-right: 50px;
+  border-radius: 10px;
+  border: solid 1px $my-lightgrey;
+  box-shadow: 3px 3px 3px $my-lightgrey;
+}
+.container-2 {
+  background: white;
+  border-radius: 10px;
+  margin: 10px 0px;
+  padding: 20px 0px;
 }
 
 .card-show {
@@ -47,10 +58,11 @@
   justify-content: center;
   padding-right: 5px;
   border: solid 2px $my-grey;
-  margin-top: 10px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 10px $my-grey;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: solid 1px $my-lightgrey;
+  box-shadow: 3px 3px 3px $my-lightgrey;
   .fa {
     font-size: 40px;
   }
@@ -70,19 +82,15 @@
     font-size: 25px;
     text-align: center;
   }
+}
+
+.cards-container {
 
 }
-.social-container {
-}
-.cards-container {
-  margin-top: 30px;
-  background-color: white;
-}
 .pictures-container {
-  background-color: white;
-  margin-top: 30px;
-  padding-left: 5px;
+
 }
+
 .img-show {
   box-shadow: $my-grey 1px;
 }

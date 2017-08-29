@@ -27,11 +27,11 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
 
   root 'subscriptions#index'
-  resources :subscriptions, only: [:index, :show]
-
-  resources :orders, only: [:show, :create] do
+  resources :subscriptions, only: [:index, :show, :create, :new] do
     resources :payments, only: [:new, :create]
   end
+
+  resources :orders, only: [:show, :create]
 
 
   # get 'messages/new'

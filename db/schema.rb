@@ -72,7 +72,6 @@ ActiveRecord::Schema.define(version: 20170828154717) do
     t.string "state"
     t.string "subscription_sku"
     t.integer "amount_cents", default: 0, null: false
-    t.string "amount_currency", default: "EUR", null: false
     t.json "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
