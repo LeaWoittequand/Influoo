@@ -9,9 +9,6 @@
         <li class=""><a data-toggle="tab" id="tab3" href="#Favorites" aria-expanded="false">Favorites</a></li>
       </ul>
       <div class="tab-content">
-        <div id="inbox" class="tab-pane active">
-          <%= render 'inbox', conversations: @conversations, users: @users %>
-        </div>
         <div id="Profile" class="tab-pane">
           <%= render 'profile_forms.html.erb', user: @user %>
         </div>

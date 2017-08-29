@@ -3,6 +3,13 @@ class ConversationsController < ApplicationController
   end
 
   def show
+    @user = current_user
+    @users = User.all.where.not(id: current_user)
+    @conversations = policy_scope(Conversation)
+    authorize(@conversations)
+    @conversation = Conversation.find(params[:id])
+
+    @favorites = @user.favorites
   end
 
   def new

@@ -1,25 +1,29 @@
 <div class="row">
-  <div class="col-md-12">
-    <ul id="conversations-list">
+  <div class="divide60"></div>
+  <div class="col-xs-4 col-sd-4">
+    <ul class="user-list">
       <% conversations.each do |conversation| %>
-        <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
+        <li>
+          <%= image_tag conversation.opposed_user(@user).avatar, class: "avatar msg-avatar" %>
+          <%= link_to conversation.opposed_user(@user).first_name, conversation_path(conversation.id), class: "btn buton-profile opposed_user" %>
+        </li>
       <% end %>
     </ul>
   </div>
-  <div class="col-md-12">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">User list</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-          <% users.each do |user| %>
-            <li>
-              <%= link_to user.first_name, conversations_path(user_id: user), remote: true, method: :post %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+  <div class="col-xs-8 col-sd-8">
+    <div class="current-conversation"><h3 class="text-center">Chat with <%= @conversation.opposed_user(@user).first_name %></h3>
     </div>
+    <div id="messages-list">
+      <ul>
+        <% conversation.messages.each do |message| %>
+          <%= render 'messages/message', user: current_user, message: message %>
+        <% end %>
+      </ul>
+    </div>
+    <%= form_for [conversation, conversation.messages.new], remote: true do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.text_area :content, class: "form-control" %>
+      <%= f.submit "Send", class: "btn buton-profile" %>
+    <% end %>
   </div>
 </div>

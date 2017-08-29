@@ -1,21 +1,22 @@
 .nav-tabs {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 .nav {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-left: 0;
-    list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
 }
 .nav-tabs li {
-    display: list-item;
-    flex: 1 1 33%;
-    text-align: -webkit-match-parent;
-    border-top: 1px solid #ddd;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin: 0;
+  display: list-item;
+  flex: 1 1 33%;
+  text-align: -webkit-match-parent;
+  border-top: 1px solid #ddd;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0;
+  box-sizing: border-box;
 }
 #tab1 {
   border-left: 1px solid #ddd;
@@ -24,6 +25,7 @@
 #tab3 {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
+  margin-right: 0;
 }
 .tabs-default.nav-tabs.nav-tabs .nav-link {
     border-top: 3px solid transparent;
