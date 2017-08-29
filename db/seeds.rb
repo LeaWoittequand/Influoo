@@ -279,6 +279,192 @@ Influencer.create!( pseudo: "#{anne.first_name} #{anne.last_name}",
                     category: sport
                   )
 
+sissy_tw = client.user("@SissyMUA")
+sissy = User.create!( first_name: "Sissy",
+                    last_name: "Mua",
+                    description: "",
+                    email: "sissy" + email,
+                    avatar: sissy_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{sissy.first_name} #{sissy.last_name}",
+                    fb_url: "https://www.facebook.com/pg/sissydubndidu/",
+                    fb_followers: 111684,
+                    ig_url: "https://www.instagram.com/sissydubndidu/",
+                    ig_followers: 603491,
+                    tw_username: sissy_tw.screen_name,
+                    tw_followers: sissy_tw.followers_count,
+                    description: sissy_tw.description,
+                    language: sissy_tw.lang,
+                    avatar: sissy_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: sissy_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: sissy,
+                    category: sport
+                  )
 
+
+
+kilian_tw = client.user("@kilianj")
+kilian = User.create!( first_name: "kilian",
+                    last_name: "Jornet",
+                    description: "",
+                    email: "kilian" + email,
+                    avatar: kilian_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{kilian.first_name} #{kilian.last_name}",
+                    fb_url: "https://www.facebook.com/pg/kiliandubndidu/",
+                    fb_followers: 749780,
+                    ig_url: "https://www.instagram.com/kiliandubndidu/",
+                    ig_followers: 444523,
+                    tw_username: kilian_tw.screen_name,
+                    tw_followers: kilian_tw.followers_count,
+                    description: kilian_tw.description,
+                    language: kilian_tw.lang,
+                    avatar: kilian_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: kilian_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: kilian,
+                    category: sport
+                  )
+
+greg_tw = client.user("@Greg_Runner")
+greg = User.create!( first_name: "greg",
+                    last_name: "Runner",
+                    description: "",
+                    email: "greg" + email,
+                    avatar: greg_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{greg.first_name} #{greg.last_name}",
+                    fb_url: "https://www.facebook.com/pg/gregdubndidu/",
+                    fb_followers: 749780,
+                    ig_url: "https://www.instagram.com/gregdubndidu/",
+                    ig_followers: 444523,
+                    tw_username: greg_tw.screen_name,
+                    tw_followers: greg_tw.followers_count,
+                    description: greg_tw.description,
+                    language: greg_tw.lang,
+                    avatar: greg_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: greg_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: greg,
+                    category: sport
+                  )
+
+
+georgia_tw = client.user("@GeorgiaSecrets")
+georgia = User.create!( first_name: "georgia",
+                    last_name: "Secret",
+                    description: "",
+                    email: "georgia" + email,
+                    avatar: georgia_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{georgia.first_name} #{georgia.last_name}",
+                    fb_url: "https://www.facebook.com/pg/georgiadubndidu/",
+                    fb_followers: 88825,
+                    ig_url: "https://www.instagram.com/georgiadubndidu/",
+                    ig_followers: 294251,
+                    tw_username: georgia_tw.screen_name,
+                    tw_followers: georgia_tw.followers_count,
+                    description: georgia_tw.description,
+                    language: georgia_tw.lang,
+                    avatar: georgia_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: georgia_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: georgia,
+                    category: sport
+                  )
+
+
+kurnaz_tw = client.user("@FromHumanToGod")
+kurnaz = User.create!( first_name: "Monsieur",
+                    last_name: "Kurnaz",
+                    description: "",
+                    email: "kurnaz" + email,
+                    avatar: kurnaz_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{kurnaz.first_name} #{kurnaz.last_name}",
+                    fb_url: "https://www.facebook.com/pg/kurnazdubndidu/",
+                    fb_followers: 102052,
+                    ig_url: "https://www.instagram.com/kurnazdubndidu/",
+                    ig_followers: 147519,
+                    tw_username: kurnaz_tw.screen_name,
+                    tw_followers: kurnaz_tw.followers_count,
+                    description: kurnaz_tw.description,
+                    language: kurnaz_tw.lang,
+                    avatar: kurnaz_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: kurnaz_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: kurnaz,
+                    category: sport
+                  )
+
+tibo_tw = client.user("@TiboInShape")
+tibo = User.create!( first_name: "Tibo",
+                    last_name: "Inshape",
+                    description: "",
+                    email: "tibo" + email,
+                    avatar: tibo_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{tibo.first_name} #{tibo.last_name}",
+                    fb_url: "https://www.facebook.com/pg/tibodubndidu/",
+                    fb_followers: 1062958,
+                    ig_url: "https://www.instagram.com/tibodubndidu/",
+                    ig_followers: 1699728,
+                    tw_username: tibo_tw.screen_name,
+                    tw_followers: tibo_tw.followers_count,
+                    description: tibo_tw.description,
+                    language: tibo_tw.lang,
+                    avatar: tibo_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: tibo_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: tibo,
+                    category: sport
+                  )
+
+noholita_tw = client.user("@noholita")
+noholita = User.create!( first_name: "Camille",
+                    last_name: "Callen",
+                    description: "",
+                    email: "noholita" + email,
+                    avatar: noholita_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{noholita.first_name} #{noholita.last_name}",
+                    fb_url: "https://www.facebook.com/pg/noholitadubndidu/",
+                    fb_followers: 71302,
+                    ig_url: "https://www.instagram.com/noholitadubndidu/",
+                    ig_followers: 721551,
+                    tw_username: noholita_tw.screen_name,
+                    tw_followers: noholita_tw.followers_count,
+                    description: noholita_tw.description,
+                    language: noholita_tw.lang,
+                    avatar: noholita_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: noholita_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: noholita,
+                    category: sport
+                  )
+
+seb_tw = client.user("@Sebzanella")
+seb = User.create!( first_name: "Seb",
+                    last_name: "Zanella",
+                    description: "",
+                    email: "seb" + email,
+                    avatar: seb_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{seb.first_name} #{seb.last_name}",
+                    fb_url: "https://www.facebook.com/pg/sebdubndidu/",
+                    fb_followers: 0,
+                    ig_url: "https://www.instagram.com/sebdubndidu/",
+                    ig_followers: 95577,
+                    tw_username: seb_tw.screen_name,
+                    tw_followers: seb_tw.followers_count,
+                    description: seb_tw.description,
+                    language: seb_tw.lang,
+                    avatar: seb_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: seb_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: seb,
+                    category: sport
+                  )
 
 

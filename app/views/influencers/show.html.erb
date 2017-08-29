@@ -19,10 +19,10 @@
         <% else %>
           <%= link_to 'Add to favorite', favorites_path(id: @influencer.id), method: :post, class: "btn btn-danger buton-profile" %>
         <% end %>
-       
+
          <%= link_to 'Contact', conversations_path(user_id: @influencer.user.id), method: :post, class: "btn btn-danger buton-profile" %>
        <% else %>
-        <%= link_to 'For contact him, please go to Premium', subscription_path(@subscription.id), class: "btn btn-danger buton-profile" %>
+        <%= link_to 'To contact, go Premium', subscription_path(@subscription.id), class: "btn btn-danger buton-profile" %>
       <% end %>
 
     </div>
