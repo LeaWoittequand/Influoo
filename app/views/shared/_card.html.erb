@@ -9,9 +9,10 @@
       <% if current_user.influencers.include?(influencer) %>
         <%= link_to favorite_path(influencer.id), method: :delete do %><span class="fa fa-heart-o coeur-rose"></span><% end %>
       <% else %>
+        <% if Order.where(subscription_sku: "subscription-#{current_user.email}").first %>
         <%= link_to favorites_path(id: influencer.id), method: :post do %><span class="fa fa-heart-o coeur"></span><% end%>
+           <% end %>
       <% end %>
-
     <% else %>
 
       <%= link_to new_user_session_path, method: :get do %><span class="fa fa-heart-o coeur"></span><% end%>
