@@ -12,7 +12,6 @@ class InfluencersController < ApplicationController
       else
         @category = Category.find(params[:search][:category].to_i)
       end
-
       @language = params[:search][:language]
       @pseudo = params[:pseudo]
       @avatar = params[:avatar]

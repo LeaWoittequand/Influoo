@@ -4,10 +4,18 @@
       <%= image_tag influencer.avatar, class: "card-avatar center-block" %>
     </div>
 
-    <% if current_user.influencers.include?(influencer) %>
-      <%= link_to favorite_path(influencer.id), method: :delete do %><span class="fa fa-heart-o coeur-rose"></span><% end %>
+    <% if user_signed_in? %>
+
+      <% if current_user.influencers.include?(influencer) %>
+        <%= link_to favorite_path(influencer.id), method: :delete do %><span class="fa fa-heart-o coeur-rose"></span><% end %>
+      <% else %>
+        <%= link_to favorites_path(id: influencer.id), method: :post do %><span class="fa fa-heart-o coeur"></span><% end%>
+      <% end %>
+
     <% else %>
-      <%= link_to favorites_path(id: influencer.id), method: :post do %><span class="fa fa-heart-o coeur"></span><% end%>
+
+      <%= link_to new_user_session_path, method: :get do %><span class="fa fa-heart-o coeur"></span><% end%>
+
     <% end %>
 
     <div class="card-description" align="center"><%= link_to '', influencer_path(influencer), class: "card-link"%>

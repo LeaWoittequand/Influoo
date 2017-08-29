@@ -10,6 +10,7 @@ class FavoritesController < ApplicationController
 
     authorize(favorite)
     if favorite.save
+      flash[:notice] = "#{influencer.pseudo} has been add to your favorite"
       redirect_back(fallback_location: root_path)
     else
       redirect_back(fallback_location: root_path)
@@ -21,6 +22,7 @@ class FavoritesController < ApplicationController
     influencer = Influencer.find(params[:id])
     favorite = Favorite.find_by(influencer: influencer)
     favorite.destroy
+    flash[:notice] = "#{influencer.pseudo} has been removed from your favorite"
     authorize(favorite)
     redirect_back(fallback_location: root_path)
   end

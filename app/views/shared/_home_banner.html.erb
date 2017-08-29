@@ -6,13 +6,13 @@
 <br>
 <br>
   <div class="col-xs-4">
-  <%= link_to 'Fashion', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=1&commit=Search", class: "btn btn-danger btn-banner" %>
+  <%= link_to "Fashion", {controller: "influencers", action: "index", search: {category: '1', language: '', platform: ''} }, class: "btn btn-danger btn-banner" %>
   </div>
   <div class="col-xs-4">
-  <%= link_to 'Sport', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=2&commit=Search", class: "btn btn-danger btn-banner" %>
+  <%= link_to "Sport", {controller: "influencers", action: "index", search: {category: '2', language: '', platform: ''} }, class: "btn btn-danger btn-banner" %>
   </div>
   <div class="col-xs-4">
-  <%= link_to 'Tech', "#{root_url}influencers?search%5Blanguage%5D=&search%5Bplatform%5D=&search%5Bcategory%5D=3&commit=Search", class: "btn btn-danger btn-banner" %>
+  <%= link_to "New Tech", {controller: "influencers", action: "index", search: {category: '3', language: '', platform: ''} }, class: "btn btn-danger btn-banner" %>
   </div>
 </div>
 </div>

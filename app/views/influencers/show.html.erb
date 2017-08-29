@@ -1,88 +1,68 @@
 <div class="container">
 
   <div class="influencer-content">
-
+    <!-- banner -->
     <div class="influencer-banner">
       <%= image_tag @influencer.banner_img, class: "banner"%>
     </div>
-
+    <!-- avatar -->
     <div class="influencer-avatar text-center">
       <div class="image"><%= image_tag @influencer.avatar, class: "avatar"%></div>
     </div>
-
+    <!-- call to action -->
     <div class="influencer-contact">
-
-    <% if current_user.influencers.include?(@influencer) %>
+      <% if current_user.influencers.include?(@influencer) %>
       <%= link_to 'Remove from favorite', favorite_path(@influencer), method: :delete, class: "btn btn-danger buton-profile" %>
-    <% else %>
+      <% else %>
       <%= link_to 'Add to favorite', favorites_path(id: @influencer.id), method: :post, class: "btn btn-danger buton-profile" %>
-    <% end %>
-
+      <% end %>
       <%= link_to 'Contact', conversations_path(user_id: @influencer.user.id), method: :post, class: "btn btn-danger buton-profile" %>
     </div>
-
+    <!-- description -->
     <div class="influencer-infos text-center">
-     <h3><%= @influencer.pseudo %></h3>
+      <h3><%= @influencer.pseudo %></h3>
       <% if @influencer.language == 'en' %>
-        <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" />
+      <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" /></p>
       <% else %>
-        <p><img src="../../assets/images/blank.gif" class="flag flag-<%= @influencer.language %> small-flag" alt="" />
+      <p><img src="../../assets/images/blank.gif" class="flag flag-<%= @influencer.language %> small-flag" alt="" /></p>
       <% end %>
-
-      <p><strong><%= @influencer.category.name %></strong></p>
+      <p><strong>Active in <%= @influencer.category.name %>'s world</strong></p>
     </div>
-
     <div class="influencer-description text-center">
+      <p>Few words about me :</p>
+      <% if @influencer.description == nil %>
+      <p>My name is <%= @influencer.pseudo %> and I am an active influencer in <%= @influencer.category.name %>. Contact me to discuss about your plans.</p>
+      <% else %>
       <%= @influencer.description %>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="container-2 col-xs-12">
+    <div class="cards-container col-xs-12 col-sm-6 col-md-6">
+      <div class="card-show fb-card">
+        <li><i class="fa fa-facebook-square social-media" aria-hidden="true"></i></li>
+        <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p><%= @influencer.fb_followers %></p></li>
+        <li><i class="fa fa-eye" aria-hidden="true"></i><p> 100K </p></li>
+      </div>
+      <div class="card-show tw-card">
+        <li><i class="fa fa-twitter-square social-media" aria-hidden="true"></i></li>
+        <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p><%= @influencer.tw_followers %></p></li>
+      </div>
+      <div class="card-show ig-card">
+        <li><i class="fa fa-instagram social-media" aria-hidden="true"></i></li>
+        <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p> <%= @influencer.ig_followers %></p> </li>
+      </div>
     </div>
 
-    <div class="social-container">
-      <div class="cards-container col-xs-12 col-sm-6 col-md-6">
-
-        <div class="card-show fb-card">
-          <li><i class="fa fa-facebook-square social-media" aria-hidden="true"></i></li>
-          <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p><%= @influencer.fb_followers %></p></li>
-          <li><i class="fa fa-eye" aria-hidden="true"></i><p> 100K </p></li>
-        </div>
-
-        <div class="card-show tw-card">
-          <li><i class="fa fa-twitter-square social-media" aria-hidden="true"></i></li>
-          <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p><%= @influencer.tw_followers %></p></li>
-        </div>
-
-        <div class="card-show ig-card">
-          <li><i class="fa fa-instagram social-media" aria-hidden="true"></i></li>
-          <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p> <%= @influencer.ig_followers %></p> </li>
-        </div>
-
-      </div>
-
-      <div class="pictures-container col-xs-12 col-sm-6 col-md-6"%>
-
-        <div> <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %>
-        </div>
-
-        <div>
-          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %>
-        </div>
-
-        <div>
-          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %>
-        </div>
-
-        <div>
-          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %>
-        </div>
-
-        <div>
-          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %>
-        </div>
-
-        <div>
-          <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %>
-        </div>
-
-      </div>
+    <div class="pictures-container col-xs-12 col-sm-6 col-md-6">
+      <div> <%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %></div>
+      <div><%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %></div>
+      <div><%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %></div>
+      <div><%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %></div>
+      <div><%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %></div>
+      <div><%= image_tag 'http://lorempixel.com/150/150/people/', class: "col-xs-4 img-show" %></div>
     </div>
 
   </div>
