@@ -12,13 +12,17 @@
 
     <div class="influencer-contact">
 
-    <% if current_user.influencers.include?(@influencer) %>
-      <%= link_to 'Remove from favorite', favorite_path(@influencer), method: :delete, class: "btn btn-danger buton-profile" %>
-    <% else %>
-      <%= link_to 'Add to favorite', favorites_path(id: @influencer.id), method: :post, class: "btn btn-danger buton-profile" %>
-    <% end %>
+      <% if @order %>
+        <% if current_user.influencers.include?(@influencer) %>
+          <%= link_to 'Remove from favorite', favorite_path(@influencer), method: :delete, class: "btn btn-danger buton-profile" %>
+        <% else %>
+          <%= link_to 'Add to favorite', favorites_path(id: @influencer.id), method: :post, class: "btn btn-danger buton-profile" %>
+        <% end %>
 
-      <%= link_to 'Contact', conversations_path(user_id: @influencer.user.id), method: :post, class: "btn btn-danger buton-profile" %>
+        <%= link_to 'Contact', conversations_path(user_id: @influencer.user.id), method: :post, class: "btn btn-danger buton-profile" %>
+      <% else %>
+        <%= link_to 'For contact him, please go to Premium', subscription_path(@subscription.id), class: "btn btn-danger buton-profile" %>
+      <% end %>
     </div>
 
     <div class="influencer-infos text-center">

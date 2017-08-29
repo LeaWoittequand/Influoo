@@ -40,6 +40,8 @@ class InfluencersController < ApplicationController
 
   def show
     @influencers = Influencer.all
+    @order = Order.where(subscription_sku: "subscription-#{current_user.email}").first
+    @subscription = Subscription.all.last
   end
 
   def new
