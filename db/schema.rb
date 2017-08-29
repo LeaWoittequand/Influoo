@@ -26,8 +26,7 @@ ActiveRecord::Schema.define(version: 20170828154717) do
     t.integer "sender_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
-    t.index ["sender_id"], name: "index_conversations_on_sender_id"
+    t.index ["recipient_id", "sender_id"], name: "index_conversations_on_recipient_id_and_sender_id", unique: true
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -73,7 +72,6 @@ ActiveRecord::Schema.define(version: 20170828154717) do
     t.string "state"
     t.string "subscription_sku"
     t.integer "amount_cents", default: 0, null: false
-    t.string "amount_currency", default: "EUR", null: false
     t.json "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -104,7 +102,6 @@ ActiveRecord::Schema.define(version: 20170828154717) do
     t.string "last_name"
     t.text "description"
     t.string "avatar"
-    t.boolean "admin", default: false, null: false
     t.string "provider"
     t.string "uid"
     t.string "facebook_picture_url"
