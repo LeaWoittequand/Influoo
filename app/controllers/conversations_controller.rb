@@ -5,7 +5,7 @@ class ConversationsController < ApplicationController
   def show
     @user = current_user
     @users = User.all.where.not(id: current_user)
-    @conversations = Conversation.includes(:recipient, :messages)
+    @conversations = policy_scope(Conversation)
     authorize(@conversations)
     @conversation = Conversation.find(params[:id])
 

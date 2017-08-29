@@ -6,6 +6,6 @@ class MessagePolicy < ApplicationPolicy
   end
 
   def create?
-    !user.nil?  # Anyone can create a influencer
+    !user.nil?
   end
 end
