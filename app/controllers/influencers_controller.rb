@@ -12,7 +12,17 @@ class InfluencersController < ApplicationController
       else
         @category = Category.find(params[:search][:category].to_i)
       end
+
       @language = params[:search][:language]
+      case @language
+      when "French"
+        @language = "fr"
+      when "English"
+        @language = "en"
+      when "Spanish"
+        @language = "es"
+      end
+
       @pseudo = params[:pseudo]
       @avatar = params[:avatar]
       @platform = params[:search][:platform]
