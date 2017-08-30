@@ -34,13 +34,16 @@
       <div class="main_title">
         <h1><%= @influencer.pseudo %></h1>
       </div>
+
       <% if @influencer.language == 'en' %>
-      <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" /></p>
+
+        <p> <%= image_tag("blank.gif", class: "flag flag-gb") %><strong><%= @influencer.category.name %></strong></p>
       <% else %>
-      <p><img src="../../assets/images/blank.gif" class="flag flag-<%= @influencer.language %> small-flag" alt="" /></p>
+        <p> <%= image_tag("blank.gif", class: "flag flag-#{@influencer.language}") %><strong><%= @influencer.category.name %></strong></p>
       <% end %>
       <p><strong>Active in <%= @influencer.category.name %>'s world</strong></p>
     </div>
+
     <div class="influencer-description text-center">
       <p>Few words about me :</p>
       <% if @influencer.description == nil %>
