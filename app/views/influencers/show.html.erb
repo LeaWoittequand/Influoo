@@ -28,14 +28,15 @@
     </div>
     <!-- description -->
     <div class="influencer-infos text-center">
-      <h3><%= @influencer.pseudo %></h3>
+      <h1><%= @influencer.pseudo %></h1>
       <% if @influencer.language == 'en' %>
-      <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" /></p>
+        <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" /></p>
       <% else %>
-      <p><img src="../../assets/images/blank.gif" class="flag flag-<%= @influencer.language %> small-flag" alt="" /></p>
+        <p><img src="../../assets/images/blank.gif" class="flag flag-<%= @influencer.language %> small-flag" alt="" /></p>
       <% end %>
       <p><strong>Active in <%= @influencer.category.name %>'s world</strong></p>
     </div>
+
     <div class="influencer-description text-center">
       <p>Few words about me :</p>
       <% if @influencer.description == nil %>
