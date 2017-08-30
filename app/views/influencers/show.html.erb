@@ -37,9 +37,9 @@
 
       <% if @influencer.language == 'en' %>
 
-        <p> <%= image_tag("blank.gif", class: "flag flag-gb") %><strong><%= @influencer.category.name %></strong></p>
+        <p> <%= image_tag("blank.gif", class: "flag flag-gb") %><strong>  <%= @influencer.category.name %></strong></p>
       <% else %>
-        <p> <%= image_tag("blank.gif", class: "flag flag-#{@influencer.language}") %><strong><%= @influencer.category.name %></strong></p>
+        <p> <%= image_tag("blank.gif", class: "flag flag-#{@influencer.language}") %><strong> <%= @influencer.category.name %></strong></p>
       <% end %>
       <p><strong>Active in <%= @influencer.category.name %>'s world</strong></p>
     </div>
@@ -58,17 +58,13 @@
   <div class="container-2 col-xs-12">
     <div class="cards-container col-xs-12 col-sm-6 col-md-6">
       <div class="card-show fb-card">
-        <li><i class="fa fa-facebook-square social-media" aria-hidden="true"></i></li>
-        <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p><%= @influencer.fb_followers %></p></li>
-        <li><i class="fa fa-eye" aria-hidden="true"></i><p> 100K </p></li>
+        <li><i class="fa fa-facebook-square" aria-hidden="true"></i><p><%= @influencer.fb_followers %></p></li>
       </div>
       <div class="card-show tw-card">
-        <li><i class="fa fa-twitter-square social-media" aria-hidden="true"></i></li>
-        <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p><%= @influencer.tw_followers %></p></li>
+        <li><i class="fa fa-twitter-square" aria-hidden="true"></i></i><p><%= @influencer.tw_followers %></p></li>
       </div>
       <div class="card-show ig-card">
-        <li><i class="fa fa-instagram social-media" aria-hidden="true"></i></li>
-        <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><p> <%= @influencer.ig_followers %></p> </li>
+        <li><i class="fa fa-instagram" aria-hidden="true"></i><p> <%= @influencer.ig_followers %></p></li>
       </div>
     </div>
 
