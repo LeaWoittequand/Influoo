@@ -21,7 +21,7 @@ class ConversationsController < ApplicationController
     add_to_conversations
 
     respond_to do |format|
-      format.html {redirect_to dashboard_path(influencer_id:  params[:user_id])}
+      format.html {redirect_to conversation_path(current_user.conversations.last)}
       format.js
     end
 
