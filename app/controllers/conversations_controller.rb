@@ -8,7 +8,7 @@ class ConversationsController < ApplicationController
     @conversations = policy_scope(Conversation)
     authorize(@conversations)
     @conversation = Conversation.find(params[:id])
-
+    @influencer = @conversation.opposed_user(@user).influencer
     @favorites = @user.favorites
   end
 
