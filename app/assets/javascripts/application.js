@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= turbolinks
+//= require cable
 
 (function() {
   $(document).on('click', '.toggle-window', function(e) {

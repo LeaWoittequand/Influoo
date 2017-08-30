@@ -33,17 +33,5 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:show, :create]
 
-
-  # get 'messages/new'
-
-  # get 'messages/create'
-
-  # get 'conversations/index'
-
-  # get 'conversations/show'
-
-  # get 'conversations/new'
-
-  # get 'conversations/create'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  mount ActionCable.server, at: '/cable'
 end
