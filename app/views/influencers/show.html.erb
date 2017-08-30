@@ -30,9 +30,10 @@
     <div class="influencer-infos text-center">
       <h1><%= @influencer.pseudo %></h1>
       <% if @influencer.language == 'en' %>
-        <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" /></p>
+
+        <p> <%= image_tag("blank.gif", class: "flag flag-gb") %><strong><%= @influencer.category.name %></strong></p>
       <% else %>
-        <img src="../../assets/images/blank.gif" class="flag flag-<%= @influencer.language %>" alt="" /></p>
+        <p> <%= image_tag("blank.gif", class: "flag flag-#{@influencer.language}") %><strong><%= @influencer.category.name %></strong></p>
       <% end %>
       <p><strong>Active in <%= @influencer.category.name %>'s world</strong></p>
     </div>
