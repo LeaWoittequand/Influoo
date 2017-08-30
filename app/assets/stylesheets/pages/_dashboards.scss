@@ -98,6 +98,7 @@ textarea.form-control {
   // box-shadow: 3px 3px 3px $my-lightgrey;
   padding: 15px 30px;
   border-radius: 15px;
+  position: relative;
 }
 .influencer-infos{
   display: flex;
@@ -111,4 +112,18 @@ textarea.form-control {
 .inline-infos {
   display: inline-block;
   flex: 1 1 50%;
+}
+.info-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+  border-radius: 15px;
+  &:hover {
+    opacity: 0.1;
+  }
 }

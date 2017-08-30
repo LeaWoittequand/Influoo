@@ -21,6 +21,7 @@
           </div>
         </div>
       </div>
+      <%= link_to '', influencer_path(@influencer), class: "info-link", title: "See #{@influencer.pseudo}'s profile" %>
     </div>
     <ul class="user-list">
       <% conversations.each do |conversation| %>
