@@ -1,3 +1,6 @@
+<% content_for(:title_tag) do %>
+  <%= @influencer.pseudo %>
+<% end %>
 <div class="container">
 
   <div class="influencer-content">
@@ -28,7 +31,9 @@
     </div>
     <!-- description -->
     <div class="influencer-infos text-center">
-      <h3><%= @influencer.pseudo %></h3>
+      <div class="main_title">
+        <h1><%= @influencer.pseudo %></h1>
+      </div>
       <% if @influencer.language == 'en' %>
       <p><img src="../../assets/images/blank.gif" class="flag flag-gb %>" alt="" /></p>
       <% else %>
