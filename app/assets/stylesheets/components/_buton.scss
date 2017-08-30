@@ -12,7 +12,7 @@
   }
 }
 .btn-link {
-  color: $my-grey;
+  color: $my-darkgrey;
   text-align: center;
   display: block;
   &:hover {
@@ -20,6 +20,7 @@
     text-decoration: none;
   }
 }
+
 .btn-fb {
   width: 100%;
   border: 1px $my-blue solid;
