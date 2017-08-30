@@ -8,7 +8,15 @@
       <%= f.input :platform, collection: ["Facebook", "Instagram", "Twitter"], prompt: "Platform", label: false, placeholder: 'Platform'%>
     </div>
     <div class="col-xs-12 col-sm-3">
-      <%= f.input :category, collection: Category.all , prompt: "Category", label: false, placeholder: 'Category', selected: params[:search][:category].to_i  %>
+      <% if params[:search] == nil %>
+        <%= f.input :category, collection: Category.all , prompt: "Category", label: false, placeholder: 'Category' %>
+      <% else %>
+        <% if params[:search][:category] == "" %>
+         <%= f.input :category, collection: Category.all , prompt: "Category", label: false, placeholder: 'Category' %>
+        <% else %>
+          <%= f.input :category, collection: Category.all , prompt: "Category", label: false, placeholder: 'Category', selected: params[:search][:category].to_i  %>
+        <% end %>
+      <% end %>
     </div>
 
     <div class="col-xs-12 col-sm-3"><%= f.submit "Search for influencers", class: "btn btn-danger btn-footer search_button" %></div>
