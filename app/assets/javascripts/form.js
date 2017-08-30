@@ -1,6 +1,7 @@
 
 $('.search_button').on('click', function(event) {
-
-  $('#search_category').children().first().text("ici")
+  var selectedVal = $("#search_category option:selected").text();
 }
+
+$( "#search_category option:selected" ).text(selectedVal);
 
