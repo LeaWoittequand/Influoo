@@ -24,6 +24,7 @@
           <li class="dropdown">
             <%= link_to "Profile", dashboard_profile_path, class: "navbarbutton" %>
           </li>
+          <% end %>
 
           <% if current_user.conversations.first %>
             <li class="dropdown">

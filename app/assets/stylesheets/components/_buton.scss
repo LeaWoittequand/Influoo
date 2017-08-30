@@ -64,3 +64,19 @@
   top: -5px;
   position: relative;
 }
+
+.btn-payment {
+  border: 1px $my-darkgrey solid;
+  background: none;
+  border-radius: 20px;
+  color: $my-darkgrey;
+  margin-top: 5px;
+  &:hover{
+    background: $my-darkgrey;
+    color: white;
+    border: $my-darkgrey 1px solid;
+  }
+
+}
+
+
