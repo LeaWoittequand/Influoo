@@ -32,9 +32,9 @@
     </div>
     <div class="search-tags">
       <% if influencer.language == 'en' %>
-        <p> <%= image_tag "blank.gif", class: "flag flag-gb" %><strong><%= influencer.category.name %></strong></p>
+        <p> <%= image_tag "blank.gif", class: "flag flag-gb" %><strong> <%= influencer.category.name %></strong></p>
       <% else %>
-        <p> <%= image_tag "blank.gif", class: "flag flag-fr" %><strong><%= influencer.category.name %></strong></p>
+        <p> <%= image_tag "blank.gif", class: "flag flag-fr" %><strong> <%= influencer.category.name %></strong></p>
       <% end %>
      </div>
     <div>
