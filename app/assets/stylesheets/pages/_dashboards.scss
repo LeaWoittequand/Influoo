@@ -8,11 +8,11 @@ ul {
 }
 #messages-list {
   padding: 15px;
-  height: 360px;
+  height: 385px;
   overflow-y: auto;
   overflow-x: hidden;
   border: 1px solid $my-lightgrey;
-  box-shadow: 3px 3px 3px $my-lightgrey;
+  // box-shadow: 3px 3px 3px $my-lightgrey;
   border-radius: 15px;
 }
 .new_message {
@@ -69,7 +69,7 @@ textarea.form-control {
   padding: 20px;
   border: 1px solid $my-lightgrey;
   border-radius: 15px;
-  box-shadow: 3px 3px 3px $my-lightgrey;
+  // box-shadow: 3px 3px 3px $my-lightgrey;
 }
 .user-list a {
   padding-left: 20px;
@@ -87,8 +87,43 @@ textarea.form-control {
 }
 .current-conversation h3 {
   border: 1px solid $my-lightgrey;
-  box-shadow: 3px 3px 3px $my-lightgrey;
+  // box-shadow: 3px 3px 3px $my-lightgrey;
   border-radius: 15px;
   font-size: 1.2em;
   color: $my-darkgrey
+}
+.inbox-card {
+  margin-bottom: 10px;
+  border: 1px solid $my-lightgrey;
+  // box-shadow: 3px 3px 3px $my-lightgrey;
+  padding: 15px 30px;
+  border-radius: 15px;
+  position: relative;
+}
+.influencer-infos{
+  display: flex;
+  justify-content: space-between;
+}
+.avatar-info {
+  width: 85px;
+  height: 85px;
+  flex: 1 1 50%;
+}
+.inline-infos {
+  display: inline-block;
+  flex: 1 1 50%;
+}
+.info-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+  border-radius: 15px;
+  &:hover {
+    opacity: 0.1;
+  }
 }

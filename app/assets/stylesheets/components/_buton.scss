@@ -12,7 +12,7 @@
   }
 }
 .btn-link {
-  color: $my-grey;
+  color: $my-darkgrey;
   text-align: center;
   display: block;
   &:hover {
@@ -20,6 +20,7 @@
     text-decoration: none;
   }
 }
+
 .btn-fb {
   width: 100%;
   border: 1px $my-blue solid;
@@ -65,3 +66,19 @@
   position: relative;
   margin-top: 12px;
 }
+
+.btn-payment {
+  border: 1px $my-darkgrey solid;
+  background: none;
+  border-radius: 20px;
+  color: $my-darkgrey;
+  margin-top: 5px;
+  &:hover{
+    background: $my-darkgrey;
+    color: white;
+    border: $my-darkgrey 1px solid;
+  }
+
+}
+
+
