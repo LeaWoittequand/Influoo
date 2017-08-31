@@ -17,18 +17,18 @@
           <li class="dropdown">
             <%= link_to "All Influencers", influencers_path, class: "navbarbutton" %>
           </li>
-        <% if Order.where(subscription_sku: "subscription-#{current_user.email}").first %>
-          <li class="dropdown">
-          <%= link_to "Favorites", dashboard_favorites_path, class: "navbarbutton" %>
+          <% if Order.where(subscription_sku: "subscription-#{current_user.email}").first || current_user.influencer %>
+            <li class="dropdown">
+            <%= link_to "Favorites", dashboard_favorites_path, class: "navbarbutton" %>
+              </li>
+            <li class="dropdown">
+              <%= link_to "Profile", dashboard_profile_path, class: "navbarbutton" %>
             </li>
-          <li class="dropdown">
-            <%= link_to "Profile", dashboard_profile_path, class: "navbarbutton" %>
-          </li>
           <% end %>
 
-          <% if current_user.conversations.first %>
+          <% if conversations_exist %>
             <li class="dropdown">
-              <%= link_to "Inbox", conversation_path(current_user.conversations.first), class: "navbarbutton" %>
+              <%= link_to "Inbox", conversation_path(conversations_exist.first), class: "navbarbutton" %>
             </li>
           <% end %>
 

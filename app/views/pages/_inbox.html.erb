@@ -2,26 +2,11 @@
   <div class="divide60"></div>
   <div class="col-xs-4 col-sd-4">
     <div class="inbox-card">
-      <div>
-        <h3 class="text-center"><%= @influencer.pseudo %></h3>
-      </div>
-      <div class="influencer-infos">
-        <div class="inline-infos">
-          <%= image_tag @influencer.avatar, class: "avatar avatar-info" %>
-        </div>
-        <div class="inline-infos">
-          <div>
-            <i class="fa fa-facebook-square"></i> <%= @influencer.fb_followers %>
-          </div>
-          <div>
-            <i class="fa fa-instagram"></i> <%= @influencer.ig_followers %>
-          </div>
-          <div>
-            <i class="fa fa-twitter-square"></i> <%= @influencer.tw_followers %>
-          </div>
-        </div>
-      </div>
-      <%= link_to '', influencer_path(@influencer), class: "info-link", title: "See #{@influencer.pseudo}'s profile" %>
+      <% if  conversation.opposed_user(@user).influencer %>
+        <%= render 'pages/info_card_influencer', influencer: @influencer %>
+      <% else %>
+        <%= render 'pages/info_card_pro', pro: conversation.opposed_user(@user) %>
+      <% end %>
     </div>
     <ul class="user-list">
       <% conversations.each do |conversation| %>

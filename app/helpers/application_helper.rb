@@ -14,4 +14,8 @@ module ApplicationHelper
   def resource_class
       User
   end
+
+  def conversations_exist
+    policy_scope(Conversation)
+  end
 end
