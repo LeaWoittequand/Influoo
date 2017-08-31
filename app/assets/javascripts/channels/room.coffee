@@ -15,7 +15,7 @@ $(document).on 'ready', ->
       # console.log 'WESH ALORS?!', data
       unless data.content.blank?
         $('#messages-list > ul').append "<li>" +
-          "<div class='row'>" +
+          "<div class='row'>" + "<img class='avatar msg-avatar' src='#{data.avatar}/>"
           "<div class='#{if $('#messages-list').data('current-user-id') == data.user_id then 'message-sent' else 'message-received'}'>" +
           data.content + '</div></div></li>'
         scroll_bottom()
