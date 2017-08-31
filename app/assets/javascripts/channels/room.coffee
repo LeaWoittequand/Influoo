@@ -26,17 +26,16 @@ $(document).on 'ready', ->
         $('#messages-list > ul').append message_template
         scroll_bottom()
 
-# $(document).on 'turbolinks:load', ->
-#   $('#send_message').hide()
-#   submit_message()
-#   scroll_bottom()
+$(document).on 'ready', ->
+  submit_message()
+  scroll_bottom()
 
-# submit_message = () ->
-#   $('#message_message').on 'keydown', (event) ->
-#     if event.keyCode is 13
-#       $('#send_message').click()
-#       event.target.value = ""
-#       event.preventDefault()
+submit_message = () ->
+  $('#message_content').on 'keydown', (event) ->
+    if event.keyCode is 13
+      $('#send_message').click()
+      event.target.value = ""
+      event.preventDefault()
 
 
 scroll_bottom = () ->
