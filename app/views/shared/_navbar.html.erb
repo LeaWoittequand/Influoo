@@ -26,7 +26,7 @@
             </li>
           <% end %>
 
-          <% if conversations_exist %>
+          <% if conversations_exist.length > 0 %>
             <li class="dropdown">
               <%= link_to "Inbox", conversation_path(conversations_exist.first), class: "navbarbutton" %>
             </li>
