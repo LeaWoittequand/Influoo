@@ -1,0 +1,29 @@
+.stripe-button-el {
+  border: none !important;
+  background: none !important;
+  background-image: none !important;
+  border-radius: 20px !important;
+  color: $my-darkgrey !important;
+  box-shadow: none !important;
+  text-transform: uppercase !important;
+
+  font-family: lato !important;
+
+}
+.stripe-button-el span {
+  background: none !important;
+  background-image: none !important;
+  border-radius: 20px !important;
+  color: $my-darkgrey !important;
+  margin-top: 5px !important;
+  text-shadow: none !important;
+  border: solid 1px $my-darkgrey !important;
+  font-weight: 400 !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  &:hover{
+    background: $my-darkgrey !important;
+    color: white !important;
+    border: $my-darkgrey 1px solid !important;
+  }
+}
