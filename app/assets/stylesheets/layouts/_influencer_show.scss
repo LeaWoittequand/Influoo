@@ -47,13 +47,19 @@
   margin-right: 50px;
   border-radius: 10px;
   border: solid 1px $my-lightgrey;
-  box-shadow: 3px 3px 3px $my-lightgrey;
+  box-shadow: 1px 1px 1px $my-lightgrey;
 }
 .container-2 {
   background: white;
   border-radius: 10px;
   margin: 10px 0px;
   padding: 20px 0px;
+  margin-bottom: 30px;
+  h3 {
+    margin-bottom: 60px;
+    color: #a0a0a0;
+    margin-top: 30px;
+  }
 }
 
 .card-show {
@@ -66,7 +72,7 @@
   margin-top: 5px;
   border-radius: 10px;
   border: solid 1px $my-lightgrey;
-  box-shadow: 3px 3px 3px $my-lightgrey;
+  box-shadow: 1px 1px 1px $my-lightgrey;
   .fa {
     font-size: 40px;
   }
