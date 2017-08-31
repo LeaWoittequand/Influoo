@@ -441,7 +441,7 @@ Influencer.create!( pseudo: "#{noholita.first_name} #{noholita.last_name}",
                     avatar: noholita_tw.profile_image_url.to_s.gsub('_normal', ''),
                     banner_img: noholita_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
                     user: noholita,
-                    category: sport
+                    category: fashion
                   )
 
 seb_tw = client.user("@Sebzanella")
@@ -467,4 +467,95 @@ Influencer.create!( pseudo: "#{seb.first_name} #{seb.last_name}",
                     category: sport
                   )
 
+kayla_tw = client.user("@kayla_itsines")
+kayla = User.create!( first_name: "Kayla",
+                    last_name: "Itsines",
+                    description: "",
+                    email: "kayla" + email,
+                    avatar: kayla_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{kayla.first_name} #{kayla.last_name}",
+                    fb_url: "https://www.facebook.com/k.itsines/",
+                    fb_followers: 13121000,
+                    ig_url: "https://www.instagram.com/p/BYT-B41l-9g/?taken-by=kayla_itsines",
+                    ig_followers: 7200000,
+                    tw_username: kayla_tw.screen_name,
+                    tw_followers: kayla_tw.followers_count,
+                    description: kayla_tw.description,
+                    language: kayla_tw.lang,
+                    avatar: kayla_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: kayla_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: kayla,
+                    category: sport
+                  )
 
+kino_tw = client.user("@KinoYoga")
+kino = User.create!( first_name: "Kino",
+                    last_name: "Yoga",
+                    description: "",
+                    email: "kino" + email,
+                    avatar: kino_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{kino.first_name} #{kino.last_name}",
+                    fb_url: "https://www.facebook.com/kinoyoga/",
+                    fb_followers: 571000,
+                    ig_url: "https://www.instagram.com/p/BXLOxholv4L/?taken-by=kinoyoga",
+                    ig_followers: 1000000,
+                    tw_username: kino_tw.screen_name,
+                    tw_followers: kino_tw.followers_count,
+                    description: kino_tw.description,
+                    language: kino_tw.lang,
+                    avatar: kino_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: kino_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: kino,
+                    category: sport
+                  )
+
+
+kelly_tw = client.user("@kellyslater")
+kelly = User.create!( first_name: "Kelly",
+                    last_name: "Slater",
+                    description: "",
+                    email: "kelly" + email,
+                    avatar: kelly_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{kelly.first_name} #{kelly.last_name}",
+                    fb_url: "https://www.facebook.com/KellySlater/",
+                    fb_followers: 1876000,
+                    ig_url: "https://www.instagram.com/p/BXWekBTguDN/?taken-by=kellyslater",
+                    ig_followers: 2000000,
+                    tw_username: kelly_tw.screen_name,
+                    tw_followers: kelly_tw.followers_count,
+                    description: kelly_tw.description,
+                    language: kelly_tw.lang,
+                    avatar: kelly_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: kelly_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: kelly,
+                    category: sport
+                  )
+
+bethany_tw = client.user("@bethanyhamilton")
+bethany = User.create!( first_name: "Bethany",
+                    last_name: "Hamilton",
+                    description: "",
+                    email: "bethany" + email,
+                    avatar: bethany_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{bethany.first_name} #{bethany.last_name}",
+                    fb_url: "https://www.facebook.com/SurferBethanyHamilton",
+                    fb_followers: 2300000,
+                    ig_url: "https://www.instagram.com/p/BVvZDQKA1rX/?taken-by=bethanyhamilton",
+                    ig_followers: 1500000,
+                    tw_username: bethany_tw.screen_name,
+                    tw_followers: bethany_tw.followers_count,
+                    description: bethany_tw.description,
+                    language: bethany_tw.lang,
+                    avatar: bethany_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: bethany_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: bethany,
+                    category: sport
+                  )
