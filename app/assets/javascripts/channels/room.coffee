@@ -18,7 +18,6 @@ $(document).on 'ready', ->
           <li>
             <div class='row'>
               <div class='#{if $('#messages-list').data('current-user-id') == data.user_id then 'message-sent' else 'message-received'}'>
-                <img class='avatar msg-avatar #{if $('#messages-list').data('current-user-id') == data.user_id then 'message-sent-image' else 'message-received-image'}' src='#{data.avatar}'/>
                 #{data.content}
               </div>
             </div>

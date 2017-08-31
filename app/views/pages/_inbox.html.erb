@@ -11,7 +11,7 @@
     <ul class="user-list">
       <% conversations.each do |conversation| %>
         <li>
-          <%= image_tag conversation.opposed_user(@user).avatar, class: "avatar msg-avatar" %>
+          <%= image_tag (conversation.opposed_user(@user).avatar ? conversation.opposed_user(@user).avatar : 'http://via.placeholder.com/30x30'), class: "avatar msg-avatar" %>
           <%= link_to conversation.opposed_user(@user).first_name, conversation_path(conversation.id), class: "btn buton-profile opposed_user" %>
         </li>
       <% end %>

@@ -1,7 +1,5 @@
 <li>
   <div class="row">
-
-    <img class="avatar msg-avatar" src='<%= message.user_id ? current_user.avatar : @influencer.avatar %>'/>
     <div class="<%= user.id == message.user_id ? 'message-sent' : 'message-received' %>">
       <%= message.content %>
     </div>
