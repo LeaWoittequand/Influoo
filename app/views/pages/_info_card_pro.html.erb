@@ -3,7 +3,7 @@
       </div>
       <div class="influencer-infos">
         <div class="inline-infos text-center">
-          <%= image_tag pro.avatar, class: "avatar avatar-info" %>
+          <%= image_tag (pro.avatar ? pro.avatar : 'http://via.placeholder.com/30x30'), class: "avatar avatar-info" %>
         </div>
       </div>
 
