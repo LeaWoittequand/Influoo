@@ -211,28 +211,7 @@ Influencer.create!( pseudo: "#{amy.first_name} #{amy.last_name}",
                     user: amy,
                     category: new_tech
                   )
-# melanie_tw = client.user("@MelanieDuncan7")
-# melanie = User.create!( first_name: "Melanie",
-#               last_name: "Duncan",
-#               description: "",
-#               email: "melanie" + email,
-#               avatar: melanie_tw.profile_image_url.to_s.gsub('_normal', ''),
-#               password: pwd
-#             )
-# Influencer.create!( pseudo: "#{melanie.first_name} #{melanie.last_name}",
-#                     fb_url: "https://www.facebook.com/pg/EntrepreneuressAcademy",
-#                     fb_followers: 243298,
-#                     ig_url: "",
-#                     ig_followers: 0,
-#                     tw_username: melanie_tw.screen_name,
-#                     tw_followers: melanie_tw.followers_count,
-#                     description: melanie_tw.description,
-#                     language: melanie_tw.lang,
-#                     avatar: melanie_tw.profile_image_url.to_s.gsub('_normal', ''),
-#                     banner_img: melanie_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
-#                     user: melanie,
-#                     category: new_tech
-#                   )
+
 jonathon_tw = client.user("@jcolman")
 jonathon = User.create!( first_name: "Jonathon",
               last_name: "Colman",
@@ -442,6 +421,52 @@ Influencer.create!( pseudo: "#{noholita.first_name} #{noholita.last_name}",
                     banner_img: noholita_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
                     user: noholita,
                     category: fashion
+                  )
+
+flick_tw = client.user("@flickabram")
+flick = User.create!( first_name: "Flick",
+                    last_name: "Abram",
+                    description: "",
+                    email: "flick" + email,
+                    avatar: flick_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{flick.first_name} #{flick.last_name}",
+                    fb_url: "https://www.facebook.com/FelicityAbram/",
+                    fb_followers: 16053,
+                    ig_url: "https://www.instagram.com/p/BX7c4BFnqzj/?taken-by=flickabram",
+                    ig_followers: 36542,
+                    tw_username: flick_tw.screen_name,
+                    tw_followers: flick_tw.followers_count,
+                    description: flick_tw.description,
+                    language: flick_tw.lang,
+                    avatar: flick_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: flick_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: flick,
+                    category: sport
+                  )
+
+gab_tw = client.user("@Gabrieldlvs")
+gab = User.create!( first_name: "Gab",
+                    last_name: "De La Broue",
+                    description: "",
+                    email: "gab" + email,
+                    avatar: gab_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{gab.first_name} #{gab.last_name}",
+                    fb_url: "https://www.facebook.com/gabriel.vareilles/",
+                    fb_followers: 16053,
+                    ig_url: "https://www.instagram.com/p/BX7c4BFnqzj/?taken-by=flickabram",
+                    ig_followers: 36542,
+                    tw_username: gab_tw.screen_name,
+                    tw_followers: gab_tw.followers_count,
+                    description: gab_tw.description,
+                    language: gab_tw.lang,
+                    avatar: gab_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: gab_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: gab,
+                    category: sport
                   )
 
 seb_tw = client.user("@Sebzanella")
