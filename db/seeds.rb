@@ -258,6 +258,29 @@ Influencer.create!( pseudo: "#{anne.first_name} #{anne.last_name}",
                     category: sport
                   )
 
+carl_tw = client.user("@orelbigoo")
+carl = User.create!( first_name: "Carl",
+                    last_name: "Quivron",
+                    description: "",
+                    email: "carl" + email,
+                    avatar: carl_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    password: pwd
+            )
+Influencer.create!( pseudo: "#{carl.first_name} #{carl.last_name}",
+                    fb_url: "https://www.facebook.com/Kite-Advisor-890730474415984/",
+                    fb_followers: 2,
+                    ig_url: "https://www.instagram.com/carlquivron/",
+                    ig_followers: 310,
+                    tw_username: carl_tw.screen_name,
+                    tw_followers: 53,
+                    description: carl_tw.description,
+                    language: carl_tw.lang,
+                    avatar: carl_tw.profile_image_url.to_s.gsub('_normal', ''),
+                    banner_img: carl_tw.profile_banner_url.to_s.gsub('web', '') + "1500x500",
+                    user: carl,
+                    category: sport
+                  )
+
 sissy_tw = client.user("@SissyMUA")
 sissy = User.create!( first_name: "Sissy",
                     last_name: "Mua",
